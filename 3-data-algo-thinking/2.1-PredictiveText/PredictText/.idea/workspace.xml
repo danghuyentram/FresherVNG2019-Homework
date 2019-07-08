@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="930e6368-bffa-4a29-9da5-d40498d010d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../main/java/predictive_text/BloomFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../main/java/predictive_text/Trie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../main/java/predictive_text/test.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/hash.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_table.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_table.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/SlaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/SlaServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/ticketSLA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/test/SlaServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/SlaServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/SlaServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/ticketSLA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/ticketSLA.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PredictText/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PredictText/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="198">
               <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -86,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+            <state relative-caret-position="180">
+              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,7 +112,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="620" />
     <option name="y" value="27" />
     <option name="width" value="1300" />
@@ -150,12 +124,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -231,16 +206,17 @@
       <workItem from="1562292469333" duration="2809000" />
       <workItem from="1562296111369" duration="2407000" />
       <workItem from="1562299806789" duration="574000" />
+      <workItem from="1562314045661" duration="2006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29567000" />
+    <option name="totallyTimeSpent" value="31573000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="1853" height="1053" extended-state="7" />
+    <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26286662" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26618704" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -249,7 +225,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31113538" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31113538" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -291,7 +267,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="198">
           <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -306,13 +282,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/SearchContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -320,10 +289,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+        <state relative-caret-position="180">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

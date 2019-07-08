@@ -8,6 +8,7 @@ import javax.naming.Context;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
@@ -24,17 +25,16 @@ public class App {
 
             int count = 0;
             for (File inputFile : folder.listFiles()) {
-                if (count < 1) {
-                    Document doc = dBuilder.parse(inputFile);
-                    doc.getDocumentElement().normalize();
+                long startTime = System.nanoTime();
 
+                if (count < 10) {
+                    Document doc = dBuilder.parse(inputFile);
                     NodeList nList = doc.getElementsByTagName("post");
 
-                    System.out.println("----------------------------");
+                    System.out.println(inputFile.getName());
 
                     for (int temp = 0; temp < nList.getLength(); temp++) {
                         Node nNode = nList.item(temp);
-                        nNode.setTextContent(nNode.getTextContent().trim());
                         String[] words_tmp = nNode.getTextContent().split("\\s|,|\\.|-|\\?|\\'s");
 
                         for (String w : words_tmp) {
@@ -45,6 +45,10 @@ public class App {
                     }
                     count++;
                 }
+
+                long endTime = System.nanoTime();
+                long totalTime = endTime - startTime;
+                System.out.println("totaltime file" + totalTime);
 
             }
 
