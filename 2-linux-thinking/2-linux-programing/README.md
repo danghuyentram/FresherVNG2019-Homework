@@ -802,7 +802,7 @@ link: https://www.cs.cmu.edu/~srini/15-441/S10/lectures/r01-sockets.pdf
 #### Blocking I/O
 Yêu cầu thực thi một IO operation, sau khi hoàn thành thì trả kết quả lại. Pocess/Theard gọi bị block cho đến khi có kết quả trả về hoặc xảy ra ngoại lệ. Thực hiện đọc ghi trên input/outputstream
 
-Trong cơ chế blocking I/O, khi process thực hiện một I/O operation chưa sẵn sàng và bị đẩy vào chế độ sleep, nó đăng ký bản thân vào một hàng đợi gọi là wait queue trên file ấy. Khi một file đã sẵn sàng để đọc và ghi (điều này thường do driver của file ấy quyết định), tất cả process đang chờ sự thay đổi của file trong wait queue của event tương ứng được đánh thức.
+Trong cơ chế blocking I/O, khi process thực hiện một I/O operation chưa sẵn sàng và bị đẩy vào chế độ sleep,u nó đăng ký bản thân vào một hàng đợi gọi là wait queue trên file ấy. Khi một file đã sẵn sàng để đọc và ghi (điều này thường do driver của file ấy quyết định), tất cả process đang chờ sự thay đổi của file trong wait queue của event tương ứng được đánh thức.
 
 #### Nonblocking I/O
 Yêu cầu thực thi IO operation và trả về ngay lập tức (timeout = 0). Nếu operation chưa sẵn sàng để thực hiện thì thử lại sau. Tương đương với kiểm tra IO operatio có sẵn sàng ngay hay không, nếu có thì thực hiện và trả về, nếu không thì thông báo thử lại sau. Thực hiện đọc ghi trên buffer
