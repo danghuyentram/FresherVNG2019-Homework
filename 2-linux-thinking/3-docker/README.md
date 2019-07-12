@@ -27,6 +27,7 @@ Docker đang phát triển, phổ biến và nhanh chóng vì:
 - **DockerHub**:  là một “app store for docker images”. trên DockerHub có hàng ngàn public images được tạo bởi cộng đồng. Dễ dàng tìm thấy những image mà bạn cần và chỉ cần pull về và sử dụng với một số sửa đổi nhỏ.
 - **Modularity and Scalability**: Bạn có thể chia nhỏ những chức năng của ứng dụng thành các container riêng lẻ. Ví dụng Database chạy trên một container và Redis cache có thể chạy trên một container khác trong khi ứng dụng Node.js lại chạy trên một cái khác nữa. Với Docker, rất dễ để liên kết các container với nhau để tạo thành một ứng dụng, làm cho nó dễ dàng scale, update các thành phần độc lập với nhau.
 
+
 ## 2. Một số khái niệm liên quan
 - **Images**: hiểu nôm na là một khuôn mẫu để tạo một container. Thường thì image sẽ base trên 1 image khác với những tùy chỉnh thêm. ví dụ bạn build 1 image dựa trên image ubuntu để chạy Apache web service và ứng dụng của bạn và những tùy chỉnh, cấu hình để ứng dụng của bạn có thể chạy được. Bạn có thể tự build một image riêng cho mình hoặc sử dụng những image được publish từ cộng đồng Docker Hub. Một image sẽ được build dựa trên những chỉ dẫn của Dockerfile.
 - **Containers**: là một instance của một image. Bạn có thể create, start, stop, move or delete container dựa trên Docker API hoặc Docker CLI.
@@ -52,6 +53,23 @@ ENV ANT_HOME /usr/local/apache-ant cài đặt biến môi trường.
 ![](https://luanbn.files.wordpress.com/2015/08/server_side_code_flow.png)
 
 Docker sử dụng kiến trúc client-server. Docker client sẽ nói liên lạc với các Docker daemon, các Docker daemon sẽ thực hiện các tác vụ build, run và distribuing các Docker container.  Cả Docker client và Docker daemon có thể chạy trên cùng 1 máy, hoặc có thể kết nối theo kiểu Dockẻ client điều khiển các docker daemon như hình dưới. Docker client và daemon giao tiếp với nhau thông qua socker hoặc RESTful API.
+
+### So sánh Container của Docker và Virtual machine
+![](https://www.aquasec.com/wiki/download/attachments/2854029/docker-birthday-3-intro-to-docker-slides-18-638.jpg?version=1&modificationDate=1515522843003&api=v2)
+
+|  	| Container 	| Virtual machine 	|
+|-------------	|------------------------------------------	|--------------------------------	|
+| OS 	| Các container của docker chia sẽ host OS nên nhẹ hơn	| Mỗi VM phải có 1 OS riêng nên nặng hơn	|
+| Khởi động 	| trong vài millisecond 	| trong vài phút 	|
+| Bộ nhớ 	| yêu cầu ít bộ nhớ hơn 	| cần nhiều bộ nhớ hơn 	|
+| Tính cô lập 	| Cô lập ở mức process, ít bảo mật hơn 	| Cô lập toàn bộ nên bảo mật hơn 	|
+| Hypervisor 	| không cần	| phải có	|
+| Kích thước 	| vài MB	| vài GB	|
+| Tài nguyên	| yêu cầu ít hơn	| yêu cầu nhiều hơn	|
+
+Link: https://arxiv.org/pdf/1807.01842.pdf
+
+
 
 ## 4. Quy trình thực thi của một hệ thống sử dụng Docker
 ![](https://luanbn.files.wordpress.com/2015/08/basics-of-docker-system.png?w=675&h=323)

@@ -1,39 +1,48 @@
 # Kiến thức về Linux System
 
 <!-- TOC -->              
-- [Kiến thức về Linux System](#ki%E1%BA%BFn-th%E1%BB%A9c-v%E1%BB%81-linux-system)
-  - [2.1 File và File System](#21-file-v%C3%A0-file-system)
-    - [File descriptor](#file-descriptor)
-      - [Hoạt động của các file descriptor](#ho%E1%BA%A1t-%C4%91%E1%BB%99ng-c%E1%BB%A7a-c%C3%A1c-file-descriptor)
-    - [Linux file types](#linux-file-types)
-    - [Regular file](#regular-file)
-    - [Special file](#special-file)
-      - [Block special file](#block-special-file)
-      - [Character special file:](#character-special-file)
-  - [2.2 Process Thread](#22-process-thread)
-    - [2.2.1 Process](#221-process)
-    - [2.2.2 Thread](#222-thread)
-      - [Thread (tiểu trình):](#thread-ti%E1%BB%83u-tr%C3%ACnh)
-      - [Thư viện POSIX thread](#th%C6%B0-vi%E1%BB%87n-posix-thread)
-      - [Multi-threading (đa luồng):](#multi-threading-%C4%91a-lu%E1%BB%93ng)
-      - [Vấn đề trong multi-threading](#v%E1%BA%A5n-%C4%91%E1%BB%81-trong-multi-threading)
-      - [Race condition (tranh đoạt điều khiển)](#race-condition-tranh-%C4%91o%E1%BA%A1t-%C4%91i%E1%BB%81u-khi%E1%BB%83n)
-      - [Ngăn chặn race condition](#ng%C4%83n-ch%E1%BA%B7n-race-condition)
-      - [Deadlock](#deadlock)
-      - [Giải quyết deadlock](#gi%E1%BA%A3i-quy%E1%BA%BFt-deadlock)
-  - [2.4 Synchronization](#24-synchronization)
-    - [2.4.1 Semaphore](#241-semaphore)
-    - [2.4.2 Mutex](#242-mutex)
-    - [2.4.3 So sánh semaphore với mutex](#243-so-s%C3%A1nh-semaphore-v%E1%BB%9Bi-mutex)
-    - [2.4.4 Reader writer problem](#244-reader-writer-problem)
-  - [2.5 Netwoking](#25-netwoking)
-    - [2.5.1 Socket TCP UDP](#251-socket-tcp-udp)
-      - [Cơ chế gọi hàm trong lập trình socket](#c%C6%A1-ch%E1%BA%BF-g%E1%BB%8Di-h%C3%A0m-trong-l%E1%BA%ADp-tr%C3%ACnh-socket)
-      - [Cách sử dụng socket TCP UDP](#c%C3%A1ch-s%E1%BB%AD-d%E1%BB%A5ng-socket-tcp-udp)
-    - [2.5.2 Nonblocking I/O và Blocking I/O](#252-nonblocking-io-v%C3%A0-blocking-io)
-      - [Blocking I/O](#blocking-io)
-      - [Nonblocking I/O](#nonblocking-io)
-  - [3. Bài tập](#3-b%C3%A0i-t%E1%BA%ADp)
+- [Kiến thức về Linux System](#Ki%E1%BA%BFn-th%E1%BB%A9c-v%E1%BB%81-Linux-System)
+  - [2.1 File và File System](#21-File-v%C3%A0-File-System)
+    - [File descriptor](#File-descriptor)
+      - [Hoạt động của các file descriptor](#Ho%E1%BA%A1t-%C4%91%E1%BB%99ng-c%E1%BB%A7a-c%C3%A1c-file-descriptor)
+    - [Linux file types](#Linux-file-types)
+    - [Regular file](#Regular-file)
+    - [Special file](#Special-file)
+      - [Directory](#Directory)
+      - [Links](#Links)
+      - [Named pipe](#Named-pipe)
+      - [Socket](#Socket)
+      - [Block special file](#Block-special-file)
+      - [Character special file:](#Character-special-file)
+  - [2.2 Process Thread](#22-Process-Thread)
+    - [2.2.1 Process](#221-Process)
+    - [2.2.2 Thread](#222-Thread)
+      - [Concurrency](#Concurrency)
+      - [Parallelism](#Parallelism)
+      - [So sánh concurrency và paralleism](#So-s%C3%A1nh-concurrency-v%C3%A0-paralleism)
+      - [Kết hợp Concurrency và parallelism](#K%E1%BA%BFt-h%E1%BB%A3p-Concurrency-v%C3%A0-parallelism)
+      - [Thread (tiểu trình):](#Thread-ti%E1%BB%83u-tr%C3%ACnh)
+      - [So sánh process và thread](#So-s%C3%A1nh-process-v%C3%A0-thread)
+      - [Thư viện POSIX thread](#Th%C6%B0-vi%E1%BB%87n-POSIX-thread)
+      - [Multi-threading (đa luồng):](#Multi-threading-%C4%91a-lu%E1%BB%93ng)
+      - [Vấn đề trong multi-threading](#V%E1%BA%A5n-%C4%91%E1%BB%81-trong-multi-threading)
+      - [Race condition (tranh đoạt điều khiển)](#Race-condition-tranh-%C4%91o%E1%BA%A1t-%C4%91i%E1%BB%81u-khi%E1%BB%83n)
+      - [Ngăn chặn race condition](#Ng%C4%83n-ch%E1%BA%B7n-race-condition)
+      - [Deadlock](#Deadlock)
+      - [Giải quyết deadlock](#Gi%E1%BA%A3i-quy%E1%BA%BFt-deadlock)
+  - [2.4 Synchronization](#24-Synchronization)
+    - [2.4.1 Semaphore](#241-Semaphore)
+    - [2.4.2 Mutex](#242-Mutex)
+    - [2.4.3 So sánh semaphore với mutex](#243-So-s%C3%A1nh-semaphore-v%E1%BB%9Bi-mutex)
+    - [2.4.4 Reader writer problem](#244-Reader-writer-problem)
+  - [2.5 Netwoking](#25-Netwoking)
+    - [2.5.1 Socket TCP UDP](#251-Socket-TCP-UDP)
+      - [Cơ chế gọi hàm trong lập trình socket](#C%C6%A1-ch%E1%BA%BF-g%E1%BB%8Di-h%C3%A0m-trong-l%E1%BA%ADp-tr%C3%ACnh-socket)
+      - [Cách sử dụng socket TCP UDP](#C%C3%A1ch-s%E1%BB%AD-d%E1%BB%A5ng-socket-TCP-UDP)
+    - [2.5.2 Nonblocking I/O và Blocking I/O](#252-Nonblocking-IO-v%C3%A0-Blocking-IO)
+      - [Blocking I/O](#Blocking-IO)
+      - [Nonblocking I/O](#Nonblocking-IO)
+  - [3. Bài tập](#3-B%C3%A0i-t%E1%BA%ADp)
 
 
 ## 2.1 File và File System
@@ -47,11 +56,18 @@ Link:
 https://www.howtogeek.com/117939/htg-explains-what-everything-is-a-file-means-on-linux/
 
 ### File descriptor
+![](https://www.gocit.vn/wp-content/uploads/2019/05/Mapping-of-parent-and-child-processs-file-descriptor-table.jpg)
+
+Trong các hệ điều hành , file descriptor (FD) là một công cụ dùng để quản lý truy cập file, các thao tác nhập xuất, network socket, library files, file thực thi chương trình, chuột, bàn phím,…. Nói cho đơn giản thì toàn bộ mọi thứ trên  điều được biểu diễn dưới dạng file. Và FD là các số nguyên không âm đại diện cho những file này.
+
+Khi ta mở hoặc tạo một file, kernel sẽ trả về giá trị file descriptor cho process tương ứng. Khi ta đóng file đó lại thì file descriptor này sẽ được giải phóng để cấp phát cho những lần mở file sau. Ví dụ. nếu người dùng A mở 10 tập tin để đọc thì sẽ có 10 FD tương ứng (có thể được đánh số lần lượt là 101, 102, 103,…, 110) và các giá trị này sẽ được lưu trong bảng danh sách chứa file descriptors.
+
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Stdstreams-notitle.svg/220px-Stdstreams-notitle.svg.png)
 
-**File descriptor**: la chỉ số cho một thực thể trong kernel (lưu trữ cấu trúc dữ liệu) cái mà chứa các chi tiết của tất cả các tập tin mở. Trong POSIX, cấu trúc dữ liệu này được gọi là file descriptor table, mỗi process sẽ có file descriptor table riêng của nó. User sẽ dùng chỉ số để truy cập tới kernel bằng cách dùng một system call và kernel sẽ truy cập tới file descriptor thay cho ứng dụng dựa vào chỉ số. Một ứng dụng không thể đọc hay ghi trực tiếp vào file descriptor table
 
-Trong hệ Unix, file descriptor có thể là tập tin, thư mục, block hoặc character device (special file), socket, ...
+Mỗi một process sẽ có một bảng danh sách file descriptor riêng do kernel quản lý, kernel sẽ chuyển danh sách này sang danh sách file table quản lý toàn bộ file được truy cập bởi tất cả các process. File table này sẽ lưu lại chế độ mà file đó đang được sử dụng (đọc, ghi, chèn). Và file table này sẽ được mapping qua một bảng thứ 3 là inode table thật sự quản lý các file nằm bên dưới. Khi một tiến trình muốn đọc hoặc ghi file, tiến trình này sẽ chuyển file descriptor cho kernel xử lý (bằng các lệnh system call) và kernel sẽ truy cập file này thay cho process. Process không thể truy cập trực tiếp các file hoặc inode table
+
+![](https://www.gocit.vn/wp-content/uploads/2019/05/file-descriptor.jpg)
 
 
 #### Hoạt động của các file descriptor
@@ -171,7 +187,25 @@ Special file dùng để expose device như một file của file system. Specia
 
 Khi data được read hay write vào special file, operation sẽ thực hiện ngay lập tức và không tuân theo quy tắc của filesystem thông thường
 
-Trong linux, có 2 loại special file: block special file và character special file
+Trong linux, có 6 loại special file
+
+#### Directory
+Thư mục là file nhị phân dùng để track và định vị các file khác và các thư mục khác. Định dạng nhị phân được sử dụng để các thư mục chứa một lượng lớn các tên thư mục có thể tìm kiếm nhanh chóng.
+
+#### Links
+Link bao gồm nhiều tên file, dùng để liên kết tới một single file trên đĩa. Nó nằm trong file system như regular file hay thư mục
+
+Link gồm 2 loại: hard link và symbolic link
+
+Hard link không thực sự liên kết tới file thông thường. Nó lưu lại 1 bản copy các thuộc tính của file gốc. Nếu file thông thường bị xóa, dữ liệu của nó có thể được truy xuất thông qua hard link
+
+Symbolic link bao gồm 1 con trỏ, tên đường dẫn tới file thông thường. Nếu file thông thường bị xóa, dữ liệu của nó không thể truy xuất được nữa nếu dùng symbolic link
+
+#### Named pipe
+Named pipe là công cụ cho phép 2 hay nhiều system process có thẻ giao tiếp với nhau bằng cách dùng 1 file hoạt động như 1 pipe giữa chúng. Loại communication này được biết đến như interprocess communication hay IPC
+
+#### Socket
+Socket là công cụ dùng cho IPC. Điểm khác biệt giữa socket và pip là socket có thể cho phép 2 process giao tiếp với nhau ở các thiết bị khác hay thông qua mạng.
 
 #### Block special file
 Block special file hoạt dộng như một giao diện trực tiếp tới block device. Block device có thể là bất kì device mà có thể biểu diễn data I/O dưới dạng các blocks
@@ -245,7 +279,49 @@ link: https://www.computerhope.com/jargon/s/special-file.htm
 
 ## 2.2 Process Thread
 ### 2.2.1 Process
-Process (tiến trình): là một program (chương trình máy tính) đang thực thi. Chương trình máy tính là tập hợp nhiều câu lệnh. Nhiều process có thể xuất phát từ một program. Các process khởi nguồn từ một program có thể thực thi song song, độc lạp với nhau, hoặc có thể phụ thuộc và thực hiện tuần tự. 
+Process (tiến trình): là một chương trình đang được thực thi (đang chạy). Nhưng, một chương trình không phải là một process. Vì chương trình là một file, hay một folder bị động nằm trên máy; Trong khi đó, một process là một chương trình đang hoạt động (đang chạy, đã được tải lên bộ nhớ chính để hoạt động).
+
+Một chương trình có thể có hai (hay nhiều) process đang chạy, nhưng chúng được coi là hai (hay nhiều) quá trình độc lập với nhau.
+
+**Các trạng thái của 1 process**
+![](https://www.researchgate.net/profile/Lotfi_Boussaid/publication/317723403/figure/fig2/AS:589604558221313@1517584089660/Figure2-Process-state-transition-diagram-B-Uniprocessor-scheduling-Fixed-Priorities.png)
+
+- New: process mới được tạo.
+- Running: process đang được thực thi/ chạy.
+- Waiting: process đợi I/O hoặc tín hiệu nào đó.
+- Ready: process sẵn sàng được CPU chạy.
+- Terminated: process hoàn thành việc.
+
+Những process của một chương trình cần phải tải lên bộ nhớ chính (cụ thể là RAM) trước khi được CPU nhận và thực hiện những yêu cầu của chương trình.
+
+Các bước chuyển quá trình của process:
+
+(1): Những process được chương trình tạo ra, được sắp vào “hàng chờ” (hay còn gọi là stack).
+
+(2): Process được CPU thấy và thực thi.
+
+(3): Khi process quá bự, CPU phải nhả để thực hiện process khác. (bạn có thể tìm hiểu các thuật toán xử lý process của CPU)
+
+(4): Khi process đã được thực hiện xong.
+
+(5): Khi process đang thực hiện và yêu cầu I/O hay các tín hiệu khác. (ví dụ bạn cần file word in ra, process sẽ phải nói cho CPU, CPU gửi tín hiệu cho máy in, máy in in ra rồi báo lại CPU. Trong thời gian đó, để tiết kiệm thời gian, process này sẽ được chuyển qua trạng thái chờ, cho process khác vào thực hiện)
+
+(6): Sau khi I/O hay tín hiệu đã đến, process được sắp lại vào “hàng chờ”, chờ thực thi.
+
+**Process control block PCB**
+Mỗi process khi tạo ra sẽ được lưu thông tin tại một PCB tương ứng.
+
+Những thông tin được chứa trong PCB:
+Trạng thái của process: 1 trong 5 trạng thái được liệt kê bên trên
+
+1. Bộ đếm (program counter): chứa địa chỉ (hay trong ngôn ngữ lập trình C, ta gọi nó là con trỏ/ pointer) đến lệnh cần thực thi tiếp theo
+2. Thanh ghi CPU: có kiểu khác nhau tùy vào kiến trúc máy tính
+3. Thông tin định thời CPU: độ ưu tiên của các process, quy định process nào thì thực thi trước
+4. Thông tin quản lý bộ nhớ: tùy hệ thống bộ nhớ của từng hệ điều hành
+Trạng thái của các tín hiệu I/O: danh sách các I/O được sử dụng bởi các process
+5. Thông tin về số lượng CPU, thời gian sử dụng thực tế, thời gian process được giữ CPU tối đa
+
+Link: https://stream-hub.com/process-la-gi
 
 **Memory layout**
 ![](https://cdncontribute.geeksforgeeks.org/wp-content/uploads/memoryLayoutC.jpg)
@@ -278,9 +354,66 @@ Heap area bắt đầu từ cuối của BSS segment và mở rộng dần lên.
 
 link: https://www.geeksforgeeks.org/memory-layout-of-c-program/
 
+**Khác nhau giữa Heap và Stack**
+
+|       | Stack    | Heap   |
+| :------------- | :----------: | -----------: |
+| Vùng nhớ | được cấp phát theo từng block liền nhau  | được cấp phát ngẫy nhiên theo yêu cầu  |
+| Cấp phát và thu hồi vùng nhớ | thực hiện tự đông bởi compiler | thực hiện bởi programmer |
+| Chi phí | ít hơn | nhiều hơn |
+| Cài đặt | khó | dễ |
+| Thời gian truy cập | nhanh | chậm |
+| Khuyết điểm | thiếu vùng nhớ | vùng nhớ bị phân mảnh |
+| Kích thước| không thể thay đổi | có thể thay đổi  |
+
+Link: https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/
+
 ### 2.2.2 Thread
+#### Concurrency 
+![](https://i.stack.imgur.com/OdYWr.gif)
+
+Concurrency là hai hay nhiều process khởi động, chạy và hoàn tất trong khoảng thời gian chồng chéo nhau. Vì trong 1 khoảng thời gian, 1 core máy tính chỉ có thể thực hiện được 1 lệnh duy nhất, nên nó sẽ thực hiện ngắt và chuyển đổi giữa các lệnh của các thread khác nhau. Điều này làm cho ta cảm thấy chúng đang chạy song song với nhau nhưng không phải
+
+#### Parallelism
+![](https://i.stack.imgur.com/RRF1J.gif)
+
+Parallelism là các process sẽ thực sự chạy song song, độc lập với nhau với nhau bằng các sự dụng multicore, mỗi process chạy trên 1 core riêng biệt
+
+#### So sánh concurrency và paralleism
+|  	| Semaphore 	| Mutex 	|
+|-------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------	|
+| Bản chất 	| Semaphore là cơ chế signalling 	| Mutex là cơ chế locking 	|
+| Thể hiện 	| Semaphore là 1 giá trị integer 	| Mutex là 1 object 	|
+| Cơ chế 	| Semaphore cho phép nhiều thread cùng truy cập vào hưu hạn các instance của tài nguyên 	| Mutex cho phép nhiều thread truy cập vào 1 tài nguyên duy nhất nhưng không đồng thời 	|
+| Quyền sở hữu 	| Giá trị semaphore có thể được thay đổi bởi bất kì process đang giữ hoặc là trả lại tài nguyên 	| Mutex object lock chỉ được trả lại bởi 1 process duy nhất đó là process đã giữ lock đó 	|
+| Loại 	| 2 loại: counting semaphore và binary semaphore 	| chỉ có 1 loại 	|
+| Hoạt động 	| Giá trị semaphore được thay đổi bằng cách sử dụng wait() và signal() operation 	| Mutex object là lock và unlock bởi process yêu cầu hoặc trả lại tài nguyên 	|
+| Tài nguyên bị chiếm giữ 	| Nếu mọi tài nguyên đều bị chiếm giữ, process yêu cầu tài nguyên sẽ chuyển sang wait() operation và tự block tới khi semaphore được tăng giá trị lên 1 đơn vị 	| Nếu mutext object bị khóa, process yêu cầu tài nguyên sẽ bị chờ và chuyển vào queue bởi system cho tới khi lock được trả ra 	|
+
+#### Kết hợp Concurrency và parallelism
+![](../capture-screen/cap28.png)
+
+ Có thể kết hợp 2 cái lại để đạt hiệu quả tốt hơn.
+
+ Ví dụ như: 
+SERIAL > PARALLEL > CONCURRENT > CONCURRENT+PARALLEL
+
+Link: https://stackoverflow.com/questions/1050222/what-is-the-difference-between-concurrency-and-parallelism
+
 #### Thread (tiểu trình): 
 là một tác vụ cơ sở độc lập nhìn từ CPU, nó bao gồm định danh tiểu trình, một con trỏ lệnh, một tập thanh ghi, stack. Các thread trong cùng 1 process có thể chia sẽ vùng mã nguồn, vùng dữ liệu và những tài nguyên dùng chung khác, ví dụ như tập tin đang mở. Một process có thể có nhiều thread
+
+#### So sánh process và thread
+
+|       | Process    | Thread   |
+| :------------- | :----------: | -----------: |
+| Cơ bản| Process là một chương trình nào đó được thực thi  | Thread là 1 phần của process |
+| Tạo và ngắt | cần nhiều thời gian hơn | cần ít thời gian hơn |
+| Context switch | cần nhiều thời gian hơn | cần ít thời gian hơn |
+| Tài nguyên | tốn nhiều hơn| tốn ít hơn |
+| Chia sẽ tài nguyên | các process độc lập với nhau |các thread có thể chia sẽ vùng nhớ với nhau|
+
+Link: https://www.geeksforgeeks.org/difference-between-process-and-thread/
 
 #### Thư viện POSIX thread 
 là một chuẩn cho lập trình thread trong C/C++. Nó cho phép bạn tạo ra các ứng dụng chạy song song theo luồng, rất hiệu quả trên hệ thống nhiều bộ vi xử lý hoặc bộ vi xử lý nhiều nhân ở đó các luồng xử lý có thể được lập lịch chạy trên các bộ xử lý khác nhau do đó tăng được tốc độ xử lý song song hoặc xử lý phân tán.
@@ -398,7 +531,7 @@ Cách thông thường các hệ điều hành dùng để cài đặt thao tác
 
 Ví dụ: bài toán producer và consumer được đồng bộ hóa bằng semaphore như sau:
 
-![](../../capture-screen/cap14.jpg)
+![](../capture-screen/cap14.jpg)
 
 Giải pháp này dùng 3 semaphore: 1 là full để đếm số ô đã chiếm, semaphore empty để đếm số ô trống, semaphore mutex chỉ cho phép một tiến trình có thể truy cập buffer tại 1 thời điểm. nếu semaphore được khởi động bằng 1 và được dùng để đồng bộ một hoặc nhiều tiến trình vào miền găng còn được gọi là semaphore nhị phân. Mỗi tiến trình phải thực hiện lệnh Down trước khi vào miền găng và lệnh Up khi ra khởi, sẽ đảm bảo chỉ một tiến trình có thể vào miền găng
 
@@ -408,13 +541,18 @@ Mutex là phiên bản đặc biệt của semaphore, được dùng khi chức 
 Một mutex có thể 1 trong 2 trạng thái: khóa hoặc mở, thường là kiểu int, 0: mở, 1: khóa
 
 ### 2.4.3 So sánh semaphore với mutex
-Giống: cả 2 đều được sử dụng để quản lí việc truy xuất của những process tới 1 tài nguyên (thường là vùng nhớ) được shared bởi các process này
 
-Khác:
-- Semaphore: tại 1 thời điểm có nhiều hơn 1 process được truy cập vào tài nguyên dùng chung được semaphore quản lí (số lượng process này được giới hạn ở một số nhất định)
-- Mutex: 
-  - Tại 1 thời điểm chỉ có 1 process được truy cập vào tài nguyên này, nếu tài nguyên đang bị chiếm thì phải chờ tới lượt
-  - Khi tài nguyên bị chiếm giữ bởi một process thì mutex sẽ được thiết lập trạng thái khóa để các process khác không được action vào
+|  	| Semaphore 	| Mutex 	|
+|-------------------------	|--------------------------------------------------------------------------------------------------------------------------------------------------------------	|-----------------------------------------------------------------------------------------------------------------------------	|
+| Bản chất 	| Semaphore là cơ chế signalling 	| Mutex là cơ chế locking 	|
+| Thể hiện 	| Semaphore là 1 giá trị integer 	| Mutex là 1 object 	|
+| Cơ chế 	| Semaphore cho phép nhiều thread cùng truy cập vào hưu hạn các instance của tài nguyên 	| Mutex cho phép nhiều thread truy cập vào 1 tài nguyên duy nhất nhưng không đồng thời 	|
+| Quyền sở hữu 	| Giá trị semaphore có thể được thay đổi bởi bất kì process đang giữ hoặc là trả lại tài nguyên 	| Mutex object lock chỉ được trả lại bởi 1 process duy nhất đó là process đã giữ lock đó 	|
+| Loại 	| 2 loại: counting semaphore và binary semaphore 	| chỉ có 1 loại 	|
+| Hoạt động 	| Giá trị semaphore được thay đổi bằng cách sử dụng wait() và signal() operation 	| Mutex object là lock và unlock bởi process yêu cầu hoặc trả lại tài nguyên 	|
+| Tài nguyên bị chiếm giữ 	| Nếu mọi tài nguyên đều bị chiếm giữ, process yêu cầu tài nguyên sẽ chuyển sang wait() operation và tự block tới khi semaphore được tăng giá trị lên 1 đơn vị 	| Nếu mutext object bị khóa, process yêu cầu tài nguyên sẽ bị chờ và chuyển vào queue bởi system cho tới khi lock được trả ra 	|
+
+link: https://techdifferences.com/difference-between-semaphore-and-mutex.html
 
 ### 2.4.4 Reader writer problem
 Bài toán đọc ghi do Courtois và đông nghiệp đề xuất năm 1971. Xen xét một hệ thống đặt vé máy bay, có nhiều tiến trình muốn đọc và ghi. Hệ thống cho phép nhiều tiến trình có thể đọc dữ liệu cùng một lúc tuy nhiên chỉ cho duy nhất một tiến trình có thể ghi và không một tiến trình nào có thể đọc hoặc ghi lúc này.
@@ -425,7 +563,7 @@ Nếu hệ thống mà các tiến trình đọc liên tiếp thực thi và lau
 
 Dưới đây là mã nguồn
 
-![](../../capture-screen/cap15.jpg)
+![](../capture-screen/cap15.jpg)
 
 ## 2.5 Netwoking
 ### 2.5.1 Socket TCP UDP
@@ -662,14 +800,23 @@ link: https://www.cs.cmu.edu/~srini/15-441/S10/lectures/r01-sockets.pdf
 
 ### 2.5.2 Nonblocking I/O và Blocking I/O
 #### Blocking I/O
-Với Blocking I/O, khi client gửi request tới server, thread sẽ xử lí connect đó sẽ bị block cho đến khi đọc được data hoặc data được ghi hoàn  toàn. Cho đến khi hoàn thành các operation liên quan, thread không thể làm gì khác ngoài chờ đợi. Để thực hiện các request gửi tới đồng thời với phương pháp này, ta cần multiple thread, cần phân bổ một thread mới cho mỗi kết nối từ client
+Yêu cầu thực thi một IO operation, sau khi hoàn thành thì trả kết quả lại. Pocess/Theard gọi bị block cho đến khi có kết quả trả về hoặc xảy ra ngoại lệ. Thực hiện đọc ghi trên input/outputstream
+
+Trong cơ chế blocking I/O, khi process thực hiện một I/O operation chưa sẵn sàng và bị đẩy vào chế độ sleep, nó đăng ký bản thân vào một hàng đợi gọi là wait queue trên file ấy. Khi một file đã sẵn sàng để đọc và ghi (điều này thường do driver của file ấy quyết định), tất cả process đang chờ sự thay đổi của file trong wait queue của event tương ứng được đánh thức.
 
 #### Nonblocking I/O
-Với Nonblocking I/O, ta có thể sử dụng single thread để xử lí đồng  thời nhiều kết nối. 
-- Trong các hệ thống dựa trên Nonblocking I/O, thay vì ghi data vào outputstream và đọc data từ input stream, ta đọc và ghi data từ buffer
-- Channel: phương tiện vận chuyển phần lớn data vào và ra khỏi buffer, nó có thể được xem là endpoint cho communication
+Yêu cầu thực thi IO operation và trả về ngay lập tức (timeout = 0). Nếu operation chưa sẵn sàng để thực hiện thì thử lại sau. Tương đương với kiểm tra IO operatio có sẵn sàng ngay hay không, nếu có thì thực hiện và trả về, nếu không thì thông báo thử lại sau. Thực hiện đọc ghi trên buffer
 
-Link: https://medium.com/coderscorner/tale-of-client-server-and-socket-a6ef54a74763
+Nonblocking I/O thì khác, hành động thử đọc/ghi dữ liệu lên file được gọi là polling (thăm dò). Nếu không có cơ chế thông báo thời điểm file operation sẵn sàng để thực hiện, chương trình  sẽ phải liên tục polling một file trong một vòng lặp vô hạn cho tới khi thành công.
+
+![](../capture-screen/cap27.png)
+
+Hình trên:
+- (a) Blocking IO system call sẽ không trả về cho tới khi IO hoàn tất
+- (b) Nonblocking IO system call sẽ trả về ngay lập tức, process sẽ thông báo lại sau khi IO hoàn tất
+
+Link: http://faculty.salina.k-state.edu/tim/ossg/Device/blocking.html
+
 
 ## 3. Bài tập
 - [ls](./ls/README.md)

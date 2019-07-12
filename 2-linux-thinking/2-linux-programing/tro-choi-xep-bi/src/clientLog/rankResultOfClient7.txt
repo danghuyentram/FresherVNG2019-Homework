@@ -1,20 +1,20 @@
-Client 11 rank 1 sum 6445
+Client 6 rank 1 sum 7957
 
-Client 4 rank 2 sum 6333
+Client 5 rank 2 sum 7864
 
-Client 10 rank 3 sum 5793
+Client 8 rank 3 sum 6121
 
-Client 6 rank 4 sum 5776
+Client 9 rank 4 sum 5254
 
-Client 12 rank 5 sum 5734
+Client 7 rank 5 sum 5188
 
-Client 5 rank 6 sum 5157
+Client 11 rank 6 sum 5120
 
-Client 13 rank 7 sum 5081
+Client 4 rank 7 sum 4806
 
-Client 8 rank 8 sum 5036
+Client 12 rank 8 sum 4779
 
-Client 9 rank 9 sum 4843
+Client 13 rank 9 sum 4595
 
-Client 7 rank 10 sum 4763
+Client 10 rank 10 sum 4519
 
