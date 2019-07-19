@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class App {
     static Trie trie = new Trie();
-    static BloomFilter bloomFilter = new BloomFilter(1024 * 1024 * 8, 6000);
+    static BloomFilter bloomFilter = new BloomFilter(1024 * 1024 * 8, 10);
 
 
     static public void readFile() {
@@ -27,7 +27,7 @@ public class App {
             for (File inputFile : folder.listFiles()) {
                 long startTime = System.nanoTime();
 
-                if (count < 10) {
+                if (count < 1) {
                     Document doc = dBuilder.parse(inputFile);
                     NodeList nList = doc.getElementsByTagName("post");
 

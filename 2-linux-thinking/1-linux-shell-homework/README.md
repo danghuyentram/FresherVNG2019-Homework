@@ -1,20 +1,20 @@
 Mục lục
 <!-- TOC -->    
 
-- [1. Linux command](#1-linux-command)
-	- [1.1 Basic command](#11-basic-command)
-	- [1.2 Intermediate Commands](#12-intermediate-commands)
-- [2 Bài tập](#2-b%C3%A0i-t%E1%BA%ADp)
-	- [2.1 Processing texts](#21-processing-texts)
-		- [2.1.1 Count the number of lines satisfying a specific pattern in a log file](#211-count-the-number-of-lines-satisfying-a-specific-pattern-in-a-log-file)
-		- [2.1.2 Calculate KLOC of code C/C++ files in a directory](#212-calculate-kloc-of-code-cc-files-in-a-directory)
-	- [2.2 System](#22-system)
-		- [2.2.1 Kill multiple processes following a patterns (using awk, grep, xargs)](#221-kill-multiple-processes-following-a-patterns-using-awk-grep-xargs)
-		- [2.2.2 Kill processes opening a specific port (using netstat, grep...)](#222-kill-processes-opening-a-specific-port-using-netstat-grep)
-		- [2.2.3 List opennned ports, handles](#223-list-opennned-ports-handles)
-		- [2.2.4 Find files via regular expressions, and remove them](#224-find-files-via-regular-expressions-and-remove-them)
-		- [2.2.5 List, one at a time, all files larger than 100K in the /home/username directory tree. Give the user the option to delete or compress the file, then proceed to show the next one. Write to a logfile the names of all deleted files and the deletion times.](#225-list-one-at-a-time-all-files-larger-than-100k-in-the-homeusername-directory-tree-give-the-user-the-option-to-delete-or-compress-the-file-then-proceed-to-show-the-next-one-write-to-a-logfile-the-names-of-all-deleted-files-and-the-deletion-times)
-	- [2.3 Shell Scripting](#23-shell-scripting)
+- [1. Linux command](#1-Linux-command)
+	- [1.1 Basic command](#11-Basic-command)
+	- [1.2 Intermediate Commands](#12-Intermediate-Commands)
+- [2 Bài tập](#2-B%C3%A0i-t%E1%BA%ADp)
+	- [2.1 Processing texts](#21-Processing-texts)
+		- [2.1.1 Count the number of lines satisfying a specific pattern in a log file](#211-Count-the-number-of-lines-satisfying-a-specific-pattern-in-a-log-file)
+		- [2.1.2 Calculate KLOC of code C/C++ files in a directory](#212-Calculate-KLOC-of-code-CC-files-in-a-directory)
+	- [2.2 System](#22-System)
+		- [2.2.1 Kill multiple processes following a patterns (using awk, grep, xargs)](#221-Kill-multiple-processes-following-a-patterns-using-awk-grep-xargs)
+		- [2.2.2 Kill processes opening a specific port (using netstat, grep...)](#222-Kill-processes-opening-a-specific-port-using-netstat-grep)
+		- [2.2.3 List opennned ports, handles](#223-List-opennned-ports-handles)
+		- [2.2.4 Find files via regular expressions, and remove them](#224-Find-files-via-regular-expressions-and-remove-them)
+		- [2.2.5 List, one at a time, all files larger than 100K in the /home/username directory tree. Give the user the option to delete or compress the file, then proceed to show the next one. Write to a logfile the names of all deleted files and the deletion times.](#225-List-one-at-a-time-all-files-larger-than-100K-in-the-homeusername-directory-tree-Give-the-user-the-option-to-delete-or-compress-the-file-then-proceed-to-show-the-next-one-Write-to-a-logfile-the-names-of-all-deleted-files-and-the-deletion-times)
+	- [2.3 Shell Scripting](#23-Shell-Scripting)
 <!-- /TOC -->
 
 
@@ -93,7 +93,28 @@ locate -i hello
 
 ![](https://maker.pro/storage/zYTWmQm/zYTWmQmaCRIQVP81pRAyGpsQMlODoWfAiBmhGGfx.png)
 
+- find:
+  - Tìm theo tên file:
+```
+  	#find -name "Test.sh"
+```
 
+  - Tìm theo thư mục:
+```
+  # find /home -iname "Test.sh" -maxdepth 1 -type f
+/home/Test.sh
+/home/yourname/Test.sh
+/home/yourname/test.sh
+```
+
+  - Thực thi các lệnh với file tìm được:
+  
+```
+# find /home -type f -iname "Test.sh" -maxdepth 1 -exec md5sum {} \;
+d4dd8cd98f00b204e9800998fjgwjwor /home/Test.sh
+r31g8cd98f00b204e98009953j0f27g8 /home/yourname/Test.sh
+9k9d8cggkf00b204e980fd9sgs8s69gk /home/yourname/test.sh
+```
 
 
 # 2 Bài tập

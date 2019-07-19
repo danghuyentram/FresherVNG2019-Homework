@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="930e6368-bffa-4a29-9da5-d40498d010d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2-linux-thinking/1-linux-shell-homework/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2-linux-thinking/1-linux-shell-homework/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2-linux-thinking/2-linux-programing/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2-linux-thinking/2-linux-programing/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PredictText/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PredictText/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PredictText/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PredictText/Trie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PredictText/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PredictText/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/PredictText/BloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PredictText/BloomFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_function.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_table.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_function.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_function.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_table.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA/src/test/java/SlaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA/src/test/java/SlaServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../4-database-thinking/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../4-database-thinking/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -13,19 +32,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="538">
+              <caret line="90" column="49" lean-forward="true" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -33,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Dictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" selection-start-line="3" selection-end-line="7" />
+            <state relative-caret-position="126">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -42,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/SearchContext.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="36">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -51,20 +66,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Trie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="379">
+              <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="37">
+              <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -90,11 +102,11 @@
         <option value="$PROJECT_DIR$/src/main/java/PredictText/T.form" />
         <option value="$PROJECT_DIR$/src/main/java/PredictText/Dictionary.form" />
         <option value="$PROJECT_DIR$/src/main/java/PredictText/Test.form" />
-        <option value="$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/PredictText/Dictionary.java" />
         <option value="$PROJECT_DIR$/src/main/java/PredictText/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/PredictText/Trie.java" />
         <option value="$PROJECT_DIR$/src/main/java/PredictText/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PredictText/Trie.java" />
       </list>
     </option>
   </component>
@@ -103,13 +115,6 @@
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -126,7 +131,44 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PredictText" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PredictText" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PredictText" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PredictText" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PredictText" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PredictText" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PredictText" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PredictText" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PredictText" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PredictText" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="PredictText" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -134,7 +176,10 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -188,7 +233,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
-        <item itemvalue="Application.BloomFilterTest" />
       </list>
     </recent_temporary>
   </component>
@@ -207,16 +251,20 @@
       <workItem from="1562296111369" duration="2407000" />
       <workItem from="1562299806789" duration="574000" />
       <workItem from="1562314045661" duration="2006000" />
+      <workItem from="1563193536995" duration="3033000" />
+      <workItem from="1563196628961" duration="71000" />
+      <workItem from="1563262522021" duration="2767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31573000" />
+    <option name="totallyTimeSpent" value="37444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26618704" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17542888" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -225,7 +273,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31113538" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31113538" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -236,6 +284,8 @@
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32969433" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="14" />
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Maven" order="2" />
@@ -265,44 +315,38 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Test.form" />
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/BloomFilterTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Dictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/SearchContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Trie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="126">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="37">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="72" column="23" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/SearchContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PredictText/BloomFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="90" column="49" lean-forward="true" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
         </state>
       </provider>
     </entry>

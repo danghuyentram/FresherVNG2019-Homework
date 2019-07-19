@@ -1,10 +1,9 @@
 package hashtable;
 
 public class hash_table {
-    static final int prime_1 = 151;
-    static final int prime_2 =  53;
-    static final int base_size = 5;
+
     static final hash_item delete_item = new hash_item(null,null);
+    static final int base_size = 5;
 
 
     int size;
@@ -33,7 +32,6 @@ public class hash_table {
             hash_function = new double_hashing();
         }
 
-
     }
 
 
@@ -53,33 +51,43 @@ public class hash_table {
 
 
         hash_item item = new hash_item(key,value);
+        // get index to new hash_item
         int index = get_hash(item.getKey(),this.size,0);
+
+        // get current_item in index
         hash_item cur_item = this.items[index];
 
         int i=1;
 
+        // current item in index is vailable -> collision
+        // try to find other index to new hash_item
         while(cur_item!=null && cur_item!=delete_item){
             index = get_hash(item.getKey(),this.size,i);
             cur_item = this.items[index];
             i++;
         }
 
+        // insert new hash_item to hashtable in index
         this.items[index] = item;
         this.count++;
     }
 
 
     public String search(String key){
+
         int index = get_hash(key,this.size,0);
         hash_item item = this.items[index];
         int i=1;
         while (item !=null){
             if (item!=delete_item){
+                // found key value
                 if (item.getKey()==key){
                     return item.getValue();
                 }
             }
 
+            // collision
+            // try to find with other hash key
             index = get_hash(key,this.size,i);
             item = this.items[index];
             i++;
@@ -100,17 +108,18 @@ public class hash_table {
         int i=1;
         while (item!=null){
             if(item!=delete_item){
+                // found item to delete -> delete
                 if(item.getKey()==key){
                     this.items[index] = delete_item;
                     break;
                 }
             }
 
+            // collision
+            // try to find item to delete with other hash key
             index = get_hash(key,this.size,i);
             item = this.items[index];
             i++;
-          //  System.out.println("i "+index);
-
         }
         this.count--;
     }

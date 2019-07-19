@@ -403,6 +403,15 @@ Link: https://stackoverflow.com/questions/1050222/what-is-the-difference-between
 #### Thread (tiểu trình): 
 là một tác vụ cơ sở độc lập nhìn từ CPU, nó bao gồm định danh tiểu trình, một con trỏ lệnh, một tập thanh ghi, stack. Các thread trong cùng 1 process có thể chia sẽ vùng mã nguồn, vùng dữ liệu và những tài nguyên dùng chung khác, ví dụ như tập tin đang mở. Một process có thể có nhiều thread
 
+Các trạng thái của thread:
+- New thread: khi một thread mới được tạo, nó là new state. Khi một thread ở trạng thái này, thì thread vẫn chưa hoạt động.
+
+- Runnable: một thread đã sẵn sàng để chạy, nó sẽ chuyển sang trạng thái runnable. Trong trạng thái này, một thread có thể thực sự đang chạy hoặc có thể sẵn sàng chạy bất cứ lúc nào.
+
+- Blocked/Waiting: khi một thread tạm thời không hoạt động, sau đó nó có thể nằm trong một những trạng thái sau:
+  - Blocked
+  - Waiting
+  
 #### So sánh process và thread
 
 |       | Process    | Thread   |
@@ -418,8 +427,13 @@ Link: https://www.geeksforgeeks.org/difference-between-process-and-thread/
 #### Thư viện POSIX thread 
 là một chuẩn cho lập trình thread trong C/C++. Nó cho phép bạn tạo ra các ứng dụng chạy song song theo luồng, rất hiệu quả trên hệ thống nhiều bộ vi xử lý hoặc bộ vi xử lý nhiều nhân ở đó các luồng xử lý có thể được lập lịch chạy trên các bộ xử lý khác nhau do đó tăng được tốc độ xử lý song song hoặc xử lý phân tán.
 
+
 #### Multi-threading (đa luồng): 
-nhiều thread chạy song song nhau và thực hiện nhiệm vụ khác nhau cùng một lúc
+nhiều thread chạy song song nhau và thực hiện nhiệm vụ khác nhau cùng một lúc.
+
+Đối với hệ thống có multi-core, đa luồng tức là các thread sẽ được thực hiện cùng 1 lúc trên các core khác nhau
+
+Đối với hệ thống single-core, vì tại một thời điểm chỉ có 1 lệnh được thực hiện trên core nên đa luồng nghĩa là chia thời gian giữa các thread, làm ta có cảm giác chúng gần nhau chạy đông thời với nhau.
 
 #### Vấn đề trong multi-threading
 Tranh chấp bộ nhớ, đồng bộ dữ liệu, phát hiện deadlock

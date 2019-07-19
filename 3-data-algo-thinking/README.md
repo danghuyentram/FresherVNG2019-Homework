@@ -9,6 +9,7 @@
       - [Khuyết điểm:](#Khuy%E1%BA%BFt-%C4%91i%E1%BB%83m)
     - [Frequency - Count Min Sketch](#Frequency---Count-Min-Sketch)
     - [Cuckoo filter](#Cuckoo-filter)
+    - [So sánh Bloom filter và Cuckoo filter](#So-s%C3%A1nh-Bloom-filter-v%C3%A0-Cuckoo-filter)
     - [Trie](#Trie)
   - [1.2 Design pattern](#12-Design-pattern)
     - [Singleton](#Singleton)
@@ -29,7 +30,11 @@
 ## 1.1 Cấu trúc dữ liệu
 
 ### Probabilistic data structures
-Probabilistic data structures là nhóm data structers vô cùng hữu ích cho big data và streaming application. 
+Khi xử lí các tập dữ liệu lớn, chúng ta thường chỉ muốn thực hiện một số kiểm tra đơn giản như: tìm số lượng các phần tử phân biệt, tần số của các phẩn tử, kiểm tra một phàn tử có tồn tại trong tập dữ liệu không. Cách tiếp cận phổ biến đó là sử dụng một số loại cấu trúc dữ liệu xác định như Hashset hay hashtable. Nhưng khi tập dữ liệu trở nên rất lớn, các cấu trúc dữ liệu trên không còn khả thi. 
+
+Cấu trúc dữ liệu xác suất là nhóm cấu trúc dữ liệu vô cùng hữu ích cho dữ liệu lớn và các ứng dụng truyền dữ liệu. Cấu trúc này sử dụng các hàm băm để ngẫu nhiên hóa và biểu diễn 1 cách gọn gàng một tập hợp. Collision(đụng độ) sẽ được bỏ qua và lỗi sẽ được kiểm soát dưới 1 ngưỡng nhất định.
+
+So sánh với các phương pháp không lỗi, các thuật toán này sử dụng ít bộ nhớ hơn và có thời gian truy vấn hằng
 
 ### Membership Query - Bloom filter
 - Bloom filter gồm 3 operation:
@@ -49,17 +54,23 @@ Probabilistic data structures là nhóm data structers vô cùng hữu ích cho 
     - Nếu tất cả các bit là 1: thì có thể phần tử đó thuộc set
     - Chỉ cần ít nhất 1 bit là 0: chắc chắn phần tử đó không thuộc set
 - Thời gian cần để thêm hay kiểm tra phần tử là hằng O(k), phù thuộc và số phần tử đã có sẵn trong filter
+- False positive: 1% với 9,6 bit cho mỗi phần tử bất kể kích thước các phần tử. Xảy ra khi kiểm tra tất cả bit là 1 nhưng không thuộc set
+- False negative: chỉ cần ít nhất 1 bit là 0 thì phần tử đó không thuộc set nên sẽ không xảy ra
+- 
 
 Ví dụ:
+
 ![](http://peachyo.github.io/images/Probabilistic1.png)
 
 Thêm x,y,z vào bloom filter, với k=3 hash function như hình trên. Với mỗi phần tử được thêm ta tính được 3 vị trí để set thành 1. 
 Thử kiểm tra w có trong set không, tính các vị trí của w với 3 hash function, ta thấy có 1 vị trí không được set là 1, vậy w không thuộc set
 
 Số hash function k tối ưu có thể xác định bằng công thức:
+
 ![](http://peachyo.github.io/images/Probabilistic2.png)
 
 Xác suất false positive p và ước lượng số lần chèn n, thì độ dài dãy bit được tính:
+
 ![](http://peachyo.github.io/images/Probabilistic3.png)
 
 Hash function dùng cho bloom filter nên nhanh hơn cryptographic hash algorithms với phân bố đều và không bị đụng độ. Hash function thongwf dùng cho bloom filter là: Murmur hash, fnv series of hashes, Jenkins hash. Murmur hash nhanh nhất rtong 3 cái.
@@ -71,14 +82,12 @@ Hash function dùng cho bloom filter nên nhanh hơn cryptographic hash algorith
 Link: https://dzone.com/articles/introduction-probabilistic-0
 
 ### Cardinality - HyperLogLog
-HyperLogLog là thuật toán streaming dùng để ước lượng số phần tử khác nhau (cardinality) của set data rât lớn.
+HyperLogLog là thuật toán streaming dùng để ước lượng số phần tử khác nhau (cardinality) của set data rât lớn.  Bộ đếm HyperLogLog có thể đếm một tỷ mục riêng biệt với độ chính xác 2% chỉ bằng 1,5 KB bộ nhớ.
 
 HyperLogLog gồm 2 parameter:
 - p: số bit để xác định bucket dùng để tính trung bình (ví dụ: m=2^p là số bucket/substream)
 - h: hash function để tính các giá trị hash khác nhau
   
-HyperLogLog counter có thể đếm được 1 tỉ các phần tử khác nhau với tỉ lệ sai là 2% và dùng 1.5kB bộ nhớ.
-
 HyperLogLog dùng random để ước lượng gần đúng số phần tử của set. Sự random này dựa trên việc dùng hash funtion h
 
 Quan sát số lượng số 0 tối đa ở đầu cho tất cả giá trị hash
@@ -90,10 +99,12 @@ Stochastic averaging(tính trung bình ngẫu nhiên) được dùng để giả
 - Rank đó sẽ lưu trong dãy M, với M[i] lưu giá trị max rank của các substream với index i
 
 Ước lượng số phần tử khác nhau được tính bởi công thức sau:
+
 ![](capture-screen/cap1.png)
 
 Ví dụ:
 - Dùng p=3 bit để lưu số bucket, m=2^3=8 bucket
+  
   ![](capture-screen/cap2.png)
 - L=8 bit hash function h
 - Dùng hash function h tính index cho "berlin" và "ferret"
@@ -102,20 +113,24 @@ Ví dụ:
 - Khởi tạo bucket và tính các giá trị lưu vào (dùng p=3 bit đầu cho bucket và nhiều nhất L-p=5 bit cho rank)
   - bucket("berlin")=011=3 , value("berlin")=rank(0111)=2
   - bucket("ferret")=110=6 , value("ferret")=rank(0011)=3
+  
 ![](capture-screen/cap3.png)
 
 - Tính giá trị cho "kharkov"
   - h("kharkov") = 1100001
   - bucket("kharkov")=110=6 value("kharkov")=rank(0001)=4
   - M[6]=max(M[6],4)= max(3,4)=4
+  
 ![](capture-screen/cap4.png)
 
 - Ước lượng cardinality với const(8)=0.66
+  
   ![](capture-screen/cap5.png)
 
 
 #### Ưu điểm
 - Bộ nhớ cần dùng không tăng tuyến tính với L: với hash function L bits với p bit đầu, thì cần bộ nhớ
+  
 ![](capture-screen/cap6.png)
 
 HyperLogLog nguyên thủy dùng 32 bit hash code, càn 5.2^p bit
@@ -123,6 +138,7 @@ HyperLogLog nguyên thủy dùng 32 bit hash code, càn 5.2^p bit
 - Không cần tính tất cả giá trị hash code cho từng phần tử
   - p bit đầu và số lượng số 0 đầu của dãy bit là đủ
 - Standard error(sai số chuẩn) được tính:
+  
   ![](capture-screen/cap7.png)
   
 #### Khuyết điểm:
@@ -133,7 +149,7 @@ HyperLogLog nguyên thủy dùng 32 bit hash code, càn 5.2^p bit
 Link: https://www.slideshare.net/gakhov/probabilistic-data-structures-part-2-cardinality
 
 ### Frequency - Count Min Sketch
-Count min sketch là cấu trúc dữ liệu không gian con hỗ trợ:
+Count min sketch là cấu trúc dữ liệu không gian tuyến tính phụ hỗ trợ:
 - Thêm phần tử vào structure
 - Đếm số lần phần tử được thêm vào (frequency)
 
@@ -145,6 +161,7 @@ Count min sketch gồm 2 parameter:
 Count min sketch là ma trận của các counter (được khởi tạo 0), mỗi dòng ứng với 1 hash function
 
 Thêm 1 phần tử vào sketch: tăng tất cả k hash function counter ở vị trí [i,hi(element)] i=1..k
+
 ![](capture-screen/cap8.png)
 
 Thuật toán count min sketch:
@@ -156,18 +173,23 @@ Ví dụ
 - Count min sketch với 16 cột (m=16)
 - Dùng 2 hash function (k=2)
 Với h1 là MurmurHash3 và h2 là Fowler-Noll-Vo (để tính giá trị index gần đúng, ta lấy kết quả mode 16)
+
 ![](capture-screen/cap9.png)
 
 - Thêm phần tử "berlin" vào cấu trúc
   h1("berlin")=4, h2("berlin")=12
+
   ![](capture-screen/cap10.png)
 - Thêm phần tử "berlin" vào 5 lần nữa, tổng là 6 lần
+  
   ![](capture-screen/cap11.png)
 - Thêm phần tử "bernau": 
   h1("bernau")=4 , h2("bernau")=4
+
   ![](capture-screen/cap12.png)
 - Thêm phần tử "paris"
   h1("paris")=11, h2("paris")=4
+
   ![](capture-screen/cap13.png)
 - Lấy tần số của phần tử "london"
   h1("london")=7, h2("london")=4
@@ -186,6 +208,7 @@ Tính chất count min sketch:
 - Count min sketch có data structure khá giống với counting bloom filter. Điểm khá nhau:
   - Count min sketch có số cột gần đúng,  
   - Counting bloom filter có kích thước đúng bằng số phần tử trong set
+  
 
 
 ### Cuckoo filter
@@ -193,13 +216,14 @@ Cuckoo filter cải tiến hơn bloom filter ở chỗ: có thêm delete, limite
 
 Cuckoo và bloom filter đều hữu dụng với set membership testing khi kích thước của data là rất lớn. Chúng đều chỉ dùng 7 bit cho mỗi entry. 
 
-Cuckoo filter gồm các parameter sau:
+Cuckoo hashtable gồm các parameter sau:
 - 2 hash function: h1, h2
 - Mảng b với n bucket, 
 
-Input: L là list các phần tử được thêm vào cuckoo filter
+Input: L là list các phần tử được thêm vào cuckoo hashtable
 
 Thuật toán:
+
 ![](https://cdn-images-1.medium.com/max/800/0*AUSm5q7_raFy7aOy.gif)
 ```
 while L chưa hết
@@ -215,9 +239,42 @@ while L chưa hết
             b[h2(x)]=x           
 ```
 
-Cài đặt:
 Cuckoo filter bao gồm cuckoo hash table, dùng để luu các chữ kí (fingerprint) của các item được thêm vào. Fingerprint của một item là chuỗi bit được tạo ra từ hash của item đó. Cuckoo hash table là mảng các bucket, mỗi item được thêm vào sẽ ứng với 2 bucket của 2 hash function. Mỗi bucket lưu 1 giá trị của fingerprint. Cuckoo filter được xác định bởi fingerprint và bucket size của nó. 
 Ví dụ: (2,4) cuckoo filter lưu fingerprint độ dài 2 bit và mỗi bucket trong cuckoo hash table có thể lưu tối đa 4 fingerprint
+
+Tuy nhiên, việc lưu trữ sử dụng fingerprint lại dẫn đến vấn đề thứ hai của Cuckoo hashtable là không thể tìm kiếm ngược lại vị trí thay thế cho phần tử bị đẩy ra khi xảy ra đụng độ. Để giải quyết vấn đề này, Cuckoo filter sử dụng các tính chất sau của phép xor ⊕:
+
+(A ⊕ B) ⊕ C = A ⊕ (B ⊕ C)                                 (1)
+
+A ⊕ A = 0                                                                 (2)
+
+A ⊕ 0  = A                                                                (3)
+
+Với mỗi phần tử x đầu vào hashtable của Cuckoo filter, vị trí hai bucket tiềm năng được xác định bằng kỹ thuật partial-key cuckoo hashing
+
+h1(x) = hash(x)                                                          (4)
+
+h2(x) = h1(x) ⊕ hash(f) với f = fingerprint(x)       (5)
+
+Sử dụng các tính chất (1) (2) (3), ta nhận thấy h1 có thể được tính ngược từ h2 và fingerprint f với cùng công thức (5):
+
+ h1(x) = h2(x) ⊕ hash(f)
+
+h1(x) = (h1(x) ⊕ hash(f)) ⊕ hash(f)               Từ (5)
+
+h1(x) = h1(x) ⊕ (hash(f)) ⊕ hash(f))             Tính chất (1)
+
+h1(x) = h1(x) ⊕ 0                                              Tính chất (2)
+
+h1(x) = h1(x)                                                       Tính chất (3)
+
+Vì h1(x) và h2(x) có thể suy ra được lẫn nhau bằng việc sử dụng chung một công thức (5), ta có được một công thức chung để tính vị trí bucket j tiềm năng còn lại từ vị trí bucket i có fingerprint f chứa trong bucket đó như sau:
+
+j = i ⊕ hash(f)                                               (5)
+
+Công thức (5) đã giải quyết được vấn đề thứ hai của Cuckoo hashtable. Việc thêm một phần tử mới trong  Cuckoo filter chỉ cần sử dụng các thông tin có sẵn trong bảng mà không cần phải lấy lại thông tin từ phần tử ban đầu. Ngoài ra phép toán XOR là một phép toán căn bản trên các bit, tốc độ thực hiện thường nhanh hơn các phép toán thông thường, vì vậy Cuckoo filter đã giải quyết được hai vấn đề căn bản của Cuckoo hashtable để từ đó ta có thể tối ưu hoá bộ nhớ và tăng hiệu suất khi áp dụng vào hệ thống IoT.
+
+link: https://hoanglehaithanh.com/bo-loc-cuckoo/
 
 Insertion: thuật toán
 ```
@@ -265,6 +322,13 @@ return False;
 Link: https://brilliant.org/wiki/cuckoo-filter/
 https://medium.com/techlog/cuckoo-filter-vs-bloom-filter-from-a-gophers-perspective-94d5e6c53299
 
+### So sánh Bloom filter và Cuckoo filter
+- Độ phức tạp thời giạn:
+  - Insert: cuckoo filter chậm hơn Bloom filter. Mặc dù Cuckoo filter chỉ cần O(1) để insert và Bloom filter cần hằng O(k) với k là số hàm hash. Nhưng thời gian insert của cuckoo filter tăng khi tăng tải và xác suất resize cần thiết của filter tăng lên
+  - Search: cuckoo nhanh hơn bloom filter. Vì chỉ cần kiểm tra 2 vị trí trong đối với cuckoo filter nên là O(1) nhưng bloom filter thì cần O(k)
+- Độ phức tạp không gian: bloom filter tốn nhiều không gian bộ nhớ hơn cuckoo vì không gian cho mỗi bucket sẽ nhân lên với số counter. 
+
+
 
 ### Trie
 Trie là một cấu trúc dữ liệu dùng để quản lí một tập hợp các xâu, cho phép:
@@ -291,9 +355,9 @@ Trie gồm
 
 Cài đặt
 
-- Thêm và tìm kiếm 
+- Thêm, xóa và tìm kiếm
 ```
-// C++ implementation of search and insert 
+// C++ implementation of delete 
 // operations on Trie 
 #include <bits/stdc++.h> 
 using namespace std; 
@@ -301,9 +365,8 @@ using namespace std;
 const int ALPHABET_SIZE = 26; 
   
 // trie node 
-struct TrieNode 
-{ 
-    struct TrieNode *children[ALPHABET_SIZE]; 
+struct TrieNode { 
+    struct TrieNode* children[ALPHABET_SIZE]; 
   
     // isEndOfWord is true if the node represents 
     // end of a word 
@@ -311,9 +374,9 @@ struct TrieNode
 }; 
   
 // Returns new trie node (initialized to NULLs) 
-struct TrieNode *getNode(void) 
+struct TrieNode* getNode(void) 
 { 
-    struct TrieNode *pNode =  new TrieNode; 
+    struct TrieNode* pNode = new TrieNode; 
   
     pNode->isEndOfWord = false; 
   
@@ -326,12 +389,11 @@ struct TrieNode *getNode(void)
 // If not present, inserts key into trie 
 // If the key is prefix of trie node, just 
 // marks leaf node 
-void insert(struct TrieNode *root, string key) 
+void insert(struct TrieNode* root, string key) 
 { 
-    struct TrieNode *pCrawl = root; 
+    struct TrieNode* pCrawl = root; 
   
-    for (int i = 0; i < key.length(); i++) 
-    { 
+    for (int i = 0; i < key.length(); i++) { 
         int index = key[i] - 'a'; 
         if (!pCrawl->children[index]) 
             pCrawl->children[index] = getNode(); 
@@ -345,12 +407,11 @@ void insert(struct TrieNode *root, string key)
   
 // Returns true if key presents in trie, else 
 // false 
-bool search(struct TrieNode *root, string key) 
+bool search(struct TrieNode* root, string key) 
 { 
-    struct TrieNode *pCrawl = root; 
+    struct TrieNode* pCrawl = root; 
   
-    for (int i = 0; i < key.length(); i++) 
-    { 
+    for (int i = 0; i < key.length(); i++) { 
         int index = key[i] - 'a'; 
         if (!pCrawl->children[index]) 
             return false; 
@@ -361,30 +422,81 @@ bool search(struct TrieNode *root, string key)
     return (pCrawl != NULL && pCrawl->isEndOfWord); 
 } 
   
+// Returns true if root has no children, else false 
+bool isEmpty(TrieNode* root) 
+{ 
+    for (int i = 0; i < ALPHABET_SIZE; i++) 
+        if (root->children[i]) 
+            return false; 
+    return true; 
+} 
+  
+// Recursive function to delete a key from given Trie 
+TrieNode* remove(TrieNode* root, string key, int depth = 0) 
+{ 
+    // If tree is empty 
+    if (!root) 
+        return NULL; 
+  
+    // If last character of key is being processed 
+    if (depth == key.size()) { 
+  
+        // This node is no more end of word after 
+        // removal of given key 
+        if (root->isEndOfWord) 
+            root->isEndOfWord = false; 
+  
+        // If given is not prefix of any other word 
+        if (isEmpty(root)) { 
+            delete (root); 
+            root = NULL; 
+        } 
+  
+        return root; 
+    } 
+  
+    // If not last character, recur for the child 
+    // obtained using ASCII value 
+    int index = key[depth] - 'a'; 
+    root->children[index] =  
+          remove(root->children[index], key, depth + 1); 
+  
+    // If root does not have any child (its only child got  
+    // deleted), and it is not end of another word. 
+    if (isEmpty(root) && root->isEndOfWord == false) { 
+        delete (root); 
+        root = NULL; 
+    } 
+  
+    return root; 
+} 
+  
 // Driver 
 int main() 
 { 
     // Input keys (use only 'a' through 'z' 
     // and lower case) 
-    string keys[] = {"the", "a", "there", 
-                    "answer", "any", "by", 
-                     "bye", "their" }; 
-    int n = sizeof(keys)/sizeof(keys[0]); 
+    string keys[] = { "the", "a", "there", 
+                      "answer", "any", "by", 
+                      "bye", "their", "hero", "heroplane" }; 
+    int n = sizeof(keys) / sizeof(keys[0]); 
   
-    struct TrieNode *root = getNode(); 
+    struct TrieNode* root = getNode(); 
   
     // Construct trie 
     for (int i = 0; i < n; i++) 
         insert(root, keys[i]); 
   
     // Search for different keys 
-    search(root, "the")? cout << "Yes\n" : 
-                         cout << "No\n"; 
-    search(root, "these")? cout << "Yes\n" : 
-                           cout << "No\n"; 
+    search(root, "the") ? cout << "Yes\n" : cout << "No\n"; 
+    search(root, "these") ? cout << "Yes\n" : cout << "No\n"; 
+  
+    remove(root, "heroplane"); 
+    search(root, "hero") ? cout << "Yes\n" : cout << "No\n"; 
     return 0; 
 } 
 ```
+Link: https://www.geeksforgeeks.org/trie-delete/
 
 Ứng dụng:
 Sau đây là một vài ví dụ cơ bản thể hiện tác dụng của trie
@@ -455,6 +567,7 @@ rằng chỉ có duy nhất một đối tượng được tạo.
 
 
 Cài đặt: 
+
 ![](https://www.tutorialspoint.com/design_pattern/images/singleton_pattern_uml_diagram.jpg)
 
 - Tạo class Singleton: tên là SingleObject
@@ -616,6 +729,7 @@ Builder pattern tạo 1 object phức tạp bằng cách sử dụng các object
 Builder class build object từng bước 1. 
 
 Cài đặt:
+
 ![](https://www.tutorialspoint.com/design_pattern/images/builder_pattern_uml_diagram.jpg)
 
 Ví dụ chuỗi cửa hàng thức ăn nhanh bán các loại burger và đồ uống. Burger có thể là Veg Burger hoặc Chicken Burger, được gói lại. Đồ uống gồm pepsi và coke, được đựng trong chai. 
@@ -988,13 +1102,186 @@ Link: https://www.tutorialspoint.com/design_pattern/composite_pattern.htm
 Tập hợp những nguyên tắc trong lập trình hướng đối tượng
 - SRP (Single Responsibility Principle) – “Một class chỉ được có 1 nhiệm vụ” hay nói cách khác, “nếu muốn chỉnh sửa class thì chỉ được phép có 1 và chỉ 1 lý do”.
 
+vd:
+Thay vì viết một class ôm đồm tất cả các công việc liên quan đến thao tác với CSDL như này:
+
+```
+class DBHelper {
+
+    public Connection openConnection() {};
+
+    public void saveUser(User user) {};
+
+    public List<Product> listProducts() {};
+
+    public void closeConnection() {};
+
+}
+```
+
+Chúng ta nên tách thành các class con, mỗi class xử lý một công việc riêng kiểu như này:
+
+```
+class DBConnection {
+
+    public Connection openConnection() {};
+
+    public void closeConnection() {};
+
+}
+
+class UserHelper {
+
+    public void saveUser(User user) {};
+
+}
+
+class ProductHelper {
+
+    public List<Product> listProducts() {};
+
+}
+```
+
 - OCP (Open/closed principle) – “Mở class khi cần mở rộng nó, đóng class khi cần chỉnh sửa nó”.
+
+Nguyên lý này có thể hiểu là nếu như có thêm yêu cầu phát sinh, chúng ta nên mở rộng/kế thừa các class đã tồn tại thay vì sửa đổi chúng.
+
+vd: Lớp Staff được thiết kế chỉ để đóng gói các thông tin cơ bản của nhân viên. Nếu muốn bổ sung thêm nghiệp vụ quản lý cho nhân viên, chúng ta nên tách riêng một class Manager kế thừa class Staff, bởi vì không phải nhân viên nào cũng có nghiệp vụ quản lý.
+
 
 - LSP (Liskov substitution principle) – “Subtype phải luôn có thể được thay thế bằng supertype”.
 
+Nguyên lý này có thể hiểu là các đối tượng của class cha có thể được thay thế bởi các đối tượng của các class con mà không làm thay đổi tính đúng đắn của chương trình.
+
+Ví dụ: Các đối tượng Square đều có thể xem là các đối tượng Rectangle.
+
+
 - ISP (Interface segregation principle) – “Việc dùng nhiều interface cho các client khác nhau, tốt hơn là việc chỉ dùng 1 interface cho cùng lúc nhiều mục đích” hay nói cách khác “Không được phép hạn chế access vào những method mà client không sử dụng”.
 
+Nguyên lý này có thể hiểu là thay vì viết một interface cho một mục đích chung chung, chúng ta nên tách thành nhiều interface nhỏ cho các mục đích riêng. Chúng ta không nên bắt buộc client phải implement các method mà client không cần đến.
+
+vd:
+Chúng ta có một interface Animal như sau:
+
+```
+interface Animal {
+
+    void eat();
+
+    void run();
+
+    void fly();
+
+}
+```
+
+Chúng ta có 2 class Dog và Snake implement interface Animal. Nhưng thật vô lý, Dog thì làm sao có thể fly(), cũng như Snake không thể nào run() được? Thay vào đó, chúng ta nên tách thành 3 interface như thế này:
+
+```
+interface Animal {
+
+    void eat();
+
+}
+
+interface RunnableAnimal extends Animal {
+
+    void run();
+
+}
+
+interface FlyableAnimal extends Animal {
+
+    void fly();
+
+}
+```
+
 - DIP (Dependency inversion principle) – “Module tầng trên không được phụ thuộc vào module tầng dưới. Bất cứ module nào cũng phải phụ thuộc vào cái trừu tượng, không phải vào cái cụ thể”.
+
+Nguyên lý này gồm có 2 ý nhỏ:
+
+- Các module cấp cao không nên phụ thuộc vào các module cấp thấp. Cả hai nên phụ thuộc vào abstraction.
+- Abstraction không nên phụ thuộc vào detail. Detail nên phụ thuộc vào abstraction.
+
+vd:chúng ta có 2 module cấp thấp BackendDeveloper và FrontendDeveloper và 1 module cấp cao Project sử dụng 2 module trên:
+
+```
+class BackendDeveloper {
+
+    private void codeJava() {};
+
+}
+
+class FrontendDeveloper {
+
+    private void codeJS() {};
+
+}
+
+class Project {
+
+    private BackendDeveloper backendDeveloper = new BackendDeveloper();
+    private FrontendDeveloper frontendDeveloper = new FrontendDeveloper();
+
+    public void build() {
+        backendDeveloper.codeJava();
+        frontendDeveloper.codeJS();
+    }
+
+}
+```
+
+Giả sử nếu sau này, dự án thay đổi công nghệ. Các backend developer không code Java nữa mà chuyển sang code C#. Các frontend developer không code JS thuần nữa mà nâng lên các JS framework. Rõ ràng chúng ta không những phải sửa code ở các module cấp thấp mà còn phải sửa code ở cả module cấp cao đang sử dụng các module cấp thấp đó. Điều này cho thấy module cấp cao đang phải phụ thuộc vào các module cấp thấp.
+
+Lúc này, chúng ta sẽ bổ sung thêm một abstraction Developer để các module trên phụ thuộc vào:
+
+```
+interface Developer {
+
+    void develop();
+
+}
+
+class BackendDeveloper implements Developer {
+
+    @Override
+    public void develop() {
+        codeJava();
+    }
+
+    private void codeJava() {};
+
+}
+
+class FrontendDeveloper implements Developer {
+
+    @Override
+    public void develop() {
+        codeJS();
+    }
+
+    private void codeJS() {};
+
+}
+
+class Project {
+
+    private List<Developer> developers;
+
+    public Project(List<Developer> developers) {
+        this.developers = developers;
+    }
+
+    public void build() {
+        developers.forEach(developer -> developer.develop());
+    }
+
+}
+```
+
+link: https://kipalog.com/posts/Tim-hieu-nhanh-SOLID-than-thanh
 
 ### DRY
 Viết tắt của “Don’t repeat yourself” – với ý nghĩa là “Đừng lặp lại những gì giống nhau”.

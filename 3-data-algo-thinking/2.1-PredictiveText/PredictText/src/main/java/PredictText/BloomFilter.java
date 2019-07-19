@@ -18,13 +18,14 @@ public class BloomFilter implements Dictionary
     /* Constructor */
     public BloomFilter(int capacity, int k)
     {
-        setSize = capacity;
-        set = new byte[setSize];
-        keySize = k;
+        setSize = capacity; // m: length of filter
+        set = new byte[setSize]; // array store bit
+        keySize = k; // k hash funtion
         size = 0;
         try
         {
-            md = MessageDigest.getInstance("MD5");
+            // create message digest by getInstrance() method
+            md = MessageDigest.getInstance("MD5"); // message digest: hash value,
         }
         catch (NoSuchAlgorithmException e)
         {
@@ -59,10 +60,15 @@ public class BloomFilter implements Dictionary
     private int getHash(int i)
     {
         md.reset();
+        // cover int to byte
         byte[] bytes = ByteBuffer.allocate(4).putInt(i).array();
+        // pass a byte array to message digest
         md.update(bytes, 0, bytes.length);
+
+        // get hash value
         return Math.abs(new BigInteger(1, md.digest()).intValue()) % (set.length - 1);
     }
+
     /* Function to add an object */
     public void add(String word)
     {
@@ -87,8 +93,10 @@ public class BloomFilter implements Dictionary
     {
         int[] tmpset = new int[keySize];
         tmpset[0] = getHash(word.hashCode());
-        for (int i = 1; i < keySize; i++)
+        for (int i = 1; i < keySize; i++) {
             tmpset[i] = (getHash(tmpset[i - 1]));
+
+        }
         return tmpset;
     }
 }

@@ -5,6 +5,9 @@ public class hash_function {
     static final int prime_2 =  53;
 
     public int hash(String s, int a, int m){
+        // cover string to a large int
+        // reduce the size of the int by mod m
+
         long hash = 0;
         int len_s = s.length();
 

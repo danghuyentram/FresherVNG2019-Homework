@@ -2,33 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e431b82a-8545-4fa3-9d7d-b1faf610369c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/main/java/predictive_text/BloomFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/main/java/predictive_text/Trie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/main/java/predictive_text/test.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2-linux-thinking/1-linux-shell-homework/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2-linux-thinking/1-linux-shell-homework/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2-linux-thinking/2-linux-programing/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2-linux-thinking/2-linux-programing/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/BloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/Trie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/BloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/BloomFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/Trie.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/Trie.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/hash.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_function.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_function.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_table.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/hash_table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/src/main/java/hashtable/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_function.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_function.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_table.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/hash_table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.2-HashTable/hash/target/classes/hashtable/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/SlaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/SlaServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/ticketSLA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/test/SlaServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/SlaServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/SlaServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/ticketSLA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/ticketSLA.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SlaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SlaServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../4-database-thinking/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../4-database-thinking/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,8 +32,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -56,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/SlaServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-72">
-              <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+            <state relative-caret-position="279">
+              <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,8 +60,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ticketSLA/SlaServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+            <state relative-caret-position="280">
+              <caret line="78" column="80" lean-forward="true" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -91,8 +83,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ticketSLA/App.java" />
-        <option value="$PROJECT_DIR$/src/test/java/SlaServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ticketSLA/SlaServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/SlaServiceTest.java" />
       </list>
     </option>
   </component>
@@ -110,7 +102,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="620" />
     <option name="y" value="27" />
     <option name="width" value="1300" />
@@ -124,41 +116,14 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ticketSLA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketSLA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketSLA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketSLA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketSLA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketSLA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ticketSLA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ticketSLA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../2.2-HashTable/hash" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -186,7 +151,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.SlaServiceTest.calculate">
+  <component name="RunManager" selected="TestNG.SlaServiceTest (2)">
+    <configuration name="SlaServiceTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ticketSLA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SlaServiceTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SlaServiceTest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="ticketSLA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SlaServiceTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SlaServiceTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ticketSLA" />
       <option name="PACKAGE_NAME" value="" />
@@ -212,6 +199,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SlaServiceTest (2)" />
+        <item itemvalue="TestNG.SlaServiceTest (1)" />
         <item itemvalue="TestNG.SlaServiceTest.calculate" />
         <item itemvalue="TestNG.SlaServiceTest" />
       </list>
@@ -232,49 +221,50 @@
       <workItem from="1562257517036" duration="599000" />
       <workItem from="1562292187349" duration="1552000" />
       <workItem from="1562297690911" duration="1806000" />
+      <workItem from="1563264232539" duration="1248000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 09h 09m 33s.xml">
+    <history-entry file="SlaServiceTest_calculate - 2019.07.16 at 15h 04m 16s.xml">
       <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 09h 09m 55s.xml">
+    <history-entry file="SlaServiceTest_calculate - 2019.07.16 at 16h 28m 40s.xml">
       <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 09h 10m 48s.xml">
+    <history-entry file="SlaServiceTest_calculate - 2019.07.16 at 16h 32m 53s.xml">
       <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 09h 11m 21s.xml">
+    <history-entry file="SlaServiceTest_calculate - 2019.07.16 at 16h 33m 32s.xml">
       <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 10h 36m 21s.xml">
+    <history-entry file="SlaServiceTest_calculate - 2019.07.16 at 16h 34m 00s.xml">
       <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 11h 00m 28s.xml">
+    <history-entry file="SlaServiceTest_calculate - 2019.07.16 at 16h 34m 15s.xml">
       <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 11h 01m 15s.xml">
+    <history-entry file="SlaServiceTest_calculate - 2019.07.16 at 16h 35m 18s.xml">
       <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 11h 03m 19s.xml">
+    <history-entry file="SlaServiceTest_calculate - 2019.07.16 at 16h 35m 37s.xml">
       <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 11h 07m 14s.xml">
-      <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
+    <history-entry file="SlaServiceTest_(1) - 2019.07.16 at 16h 36m 31s.xml">
+      <configuration name="SlaServiceTest (1)" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SlaServiceTest_calculate - 2019.07.05 at 11h 07m 55s.xml">
-      <configuration name="SlaServiceTest.calculate" configurationId="TestNG" />
+    <history-entry file="SlaServiceTest_(2) - 2019.07.16 at 16h 36m 56s.xml">
+      <configuration name="SlaServiceTest (2)" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15399000" />
+    <option name="totallyTimeSpent" value="16647000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="620" y="27" width="1300" height="1053" extended-state="4" />
+    <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1523126" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.107360266" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -283,7 +273,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3297062" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.40938863" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41921398" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934713" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -326,8 +316,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/SlaServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-72">
-          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        <state relative-caret-position="279">
+          <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -336,8 +326,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ticketSLA/SlaServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        <state relative-caret-position="280">
+          <caret line="78" column="80" lean-forward="true" selection-start-line="78" selection-start-column="80" selection-end-line="78" selection-end-column="80" />
         </state>
       </provider>
     </entry>

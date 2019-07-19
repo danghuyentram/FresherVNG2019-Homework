@@ -2,32 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fb2dda1-73bd-470a-9f53-b614050284e1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/main/java/predictive_text/BloomFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/main/java/predictive_text/Trie.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/main/java/predictive_text/test.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2-linux-thinking/1-linux-shell-homework/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2-linux-thinking/1-linux-shell-homework/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../2-linux-thinking/2-linux-programing/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../2-linux-thinking/2-linux-programing/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/BloomFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/BloomFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/Trie.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/src/main/java/PredictText/Trie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/BloomFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.1-PredictiveText/PredictText/target/classes/PredictText/BloomFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hashtable/hash_function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hashtable/hash_function.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hashtable/hash_table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hashtable/hash_table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hashtable/hash_table.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hashtable/hash_table.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hashtable/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hashtable/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../test.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/SlaService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/SlaServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/main/java/ticketSLA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/src/test/SlaServiceTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/SlaServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/SlaServiceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/target/classes/ticketSLA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ticketSLA/ticketSLA.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA/src/test/java/SlaServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.3-TicketSLA/ticketSLA/src/test/java/SlaServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../4-database-thinking/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../4-database-thinking/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,19 +44,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/hash_table.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/double_hashing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
+            <state relative-caret-position="180">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -72,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/hash_function.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+            <state relative-caret-position="360">
+              <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -81,17 +64,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/linear_probing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="108">
+              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/quandratic_probing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/double_hashing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/hash_table.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1980">
+              <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="432">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -123,9 +133,9 @@
         <option value="$PROJECT_DIR$/src/main/java/hashtable/linear_probing.java" />
         <option value="$PROJECT_DIR$/src/main/java/hashtable/quandratic_probing.java" />
         <option value="$PROJECT_DIR$/src/main/java/hashtable/double_hashing.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hashtable/hash_function.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hashtable/hash_table.java" />
         <option value="$PROJECT_DIR$/src/main/java/hashtable/main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hashtable/hash_table.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hashtable/hash_function.java" />
       </list>
     </option>
   </component>
@@ -144,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="620" />
     <option name="y" value="27" />
     <option name="width" value="1300" />
@@ -158,9 +168,46 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="hashtable" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -223,17 +270,19 @@
       <workItem from="1561533925344" duration="726000" />
       <workItem from="1562294726558" duration="684000" />
       <workItem from="1562299721508" duration="654000" />
+      <workItem from="1563196704057" duration="2000000" />
+      <workItem from="1563262465563" duration="1542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11483000" />
+    <option name="totallyTimeSpent" value="15025000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="1853" height="1053" extended-state="7" />
+    <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21638075" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19424461" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -253,6 +302,8 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32925585" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3264192" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -298,60 +349,16 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/hashtable/hash_table.java</url>
-          <line>39</line>
-          <properties class="hashtable.hash_table" method="get_hash">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/quandratic_probing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/hash_item.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/double_hashing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="45" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/hash_function.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/linear_probing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -362,17 +369,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/hash_table.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="180">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="432">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/hash_table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="110" column="32" selection-start-line="110" selection-start-column="32" selection-end-line="110" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/hash_function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/linear_probing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/quandratic_probing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hashtable/double_hashing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
         </state>
       </provider>
     </entry>
