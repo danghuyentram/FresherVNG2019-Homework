@@ -4,7 +4,8 @@
 ![](https://kipalog.kaopiz.com/uploads/905c/bbf5/db_en.png)
 
 Ở hình trên thì cho chúng ta thấy mô hình thường thấy của một ứng dụng trong thực tế hiện nay. Người dùng thông qua một ứng dụng sử dụng một hệ quản trị cơ sở dữ liệu(DBMS) để thực hiện các thao tác trực tiếp với database. 
-- Database (cơ sở dữ liệu): là tập dữ liệu có tổ chức, thường được lưu trữ và truy cập điện tử từ hệ thống máy tính. K
+
+- Database (cơ sở dữ liệu): là tập dữ liệu có tổ chức, thường được lưu trữ và truy cập điện tử từ hệ thống máy tính. 
 - Database Management System (hệ quản trị cơ sở dữ liệu): là phần mềm tương tác với người dùng cuối, ứng dụng và chính cơ sở dữ liệu để thu thập và phân tích dữ liệu. Phần mềm DBMS bao gồm các tiện ích cốt lõi được cung cấp để quản trị cơ sở dữ liệu. Tổng cộng của cơ sở dữ liệu, DBMS và các ứng dụng liên quan có thể được gọi là "hệ thống cơ sở dữ liệu". Thông thường thuật ngữ "cơ sở dữ liệu" cũng được sử dụng để nói đến bất kỳ DBMS, hệ thống cơ sở dữ liệu hoặc ứng dụng nào được liên kết với cơ sở dữ liệu.
 - Relational database management system (RDBMS): Hệ quản trị cơ sở dữ liệu quan hệ
 - ACID: tập các tính chất của các giao tác(transaction) trong RDBMS
@@ -130,6 +131,27 @@ Link: https://www.geeksforgeeks.org/sql-query-processing/
 
 ### MyISAM
 Table-level locking giới hạn hiệu suất read/write dữ liệu, vì vậy nó thường được sử dụng cho các công việc read-only hoặc read-mostly trong các cấu hình Web và lưu trữ dữ liệu.
+
+### Memory
+Lưu trữ tất cả dữ liệu trong RAM, để truy cập nhanh trong các môi trường đòi hỏi tra cứu nhanh các dữ liệu không quan trọng. Engine này trước đây gọi là HEAP Engine. Storage Engine này đang sử dụng ít dần, do InnoDB với vùng bộ đệm cung cấp một cách mục đích chung và bền để giữ hầu hết hoặc tất cả dữ liệu trong memory, và NDBCLUSTER cung cấp tra cứu giá trị quan trọng nhanh cho các bộ dữ liệu phân tán lớn.
+
+### CSV
+Các bảng của nó thực sự là các tập tin văn bản với các giá trị được phân cách bởi dấu phẩy. Các bảng CSV cho phép bạn nhập hoặc đổ dữ liệu ở định dạng CSV, để trao đổi dữ liệu với các tập lệnh và ứng dụng đọc và ghi cùng một định dạng. Vì bảng CSV không được lập chỉ mục, bạn thường giữ dữ liệu trong các bảng InnoDB trong quá trình hoạt động bình thường và chỉ sử dụng các bảng CSV trong giai đoạn nhập hoặc xuất.
+
+### Archive
+Các bảng nhỏ gọn, không biểu hiện này được dùng để lưu trữ và truy xuất số lượng lớn các thông tin kiểm tra lịch sử, lưu trữ, hoặc kiểm tra an toàn.
+
+### Blackhole
+Công cụ lưu trữ Blackhole chấp nhận nhưng không lưu dữ liệu, tương tự như /dev/null trên Unix. Các truy vấn luôn trả về một tập rỗng. Các bảng này có thể được sử dụng trong các cấu hình nhân bản, nơi các lệnh DML được gửi đến các slave server, nhưng các master server không giữ bản sao dữ liệu của chính nó.
+
+### NDB (còn được gọi là NDBCLUSTER)
+Công cụ cơ sở dữ liệu được nhóm lại này đặc biệt phù hợp với các ứng dụng đòi hỏi thời gian hoạt động và tính khả dụng cao nhất có thể.
+
+### Merge
+Cho phép một DBA MySQL hoặc nhà phát triển hợp lý nhóm một loạt các bảng MyISAM giống hệt nhau và tham chiếu chúng như một đối tượng. Tốt cho các môi trường VLDB như lưu trữ dữ liệu.
+
+### Federated
+Cung cấp khả năng liên kết máy chủ MySQL riêng biệt để tạo ra một cơ sở dữ liệu hợp lý từ nhiều máy chủ vật lý. Rất tốt cho môi trường phân phối hoặc môi trường dữ liệu mart.
 
 ### So sánh InnoDB và MyISAM
 - InnoDB phục hồi từ một vụ crash hoặc tắt máy bất ngờ bằng cách phát lại các bản ghi log của nó. MyISAM phải quét và sửa chữa đầy đủ hoặc xây dựng lại các chỉ mục hoặc bảng có thể đã được cập nhật nhưng không đầy đủ sang ổ cứng. Kể từ khi phương pháp InnoDB là khoảng thời gian cố định trong khi thời gian MyISAM phát triển với kích thước của các tập tin dữ liệu, InnoDB cung cấp sẵn sàng hơn khi kích thước cơ sở dữ liệu phát triển.
