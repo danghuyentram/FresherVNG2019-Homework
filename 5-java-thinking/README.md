@@ -505,4 +505,616 @@ Concurrent collecton có lợi thế hơn synchrnized collection vì các thread
 
 Khuyết điểm của cả concurrent collection và synchronized collection là nó chỉ đảm bảo thread-safe cho collection chứ không đảm bảo cho nội dụng bên trong
 
+Link: https://www.baeldung.com/java-thread-safety
 
+## 2.3 Threadpool, executors
+### Threadpool
+Xét về hiệu suất, tạo ra một Thread mới là một hoạt động tốn kém bởi vì nó đòi hỏi hệ điều hành cung cấp tài nguyên để có thể thực thi task (tác vụ). Trên thực tế, ThreadPool được sử dụng cho các ứng dụng quy mô lớn khởi chạy rất nhiều luồng ngắn ngủi để sử dụng hiệu quả các tài nguyên và tăng hiệu suất.
+
+Trong Java, ThreadPool được dùng để giới hạn số lượng Thread được chạy bên trong ứng dụng của chúng ta trong cùng một thời điểm. Nếu chúng ta không có sự giới hạn này, mỗi khi có một Thread mới được tạo ra và được cấp phát bộ nhớ bằng từ khóa new thì sẽ có vấn đề về bộ nhớ và hiệu suất, có thể dẫn đến lỗi crash chương trình.
+
+Ví dụ: Khi chúng ta viết chương trình tải các tập tin từ Internet, mỗi tập tin cần 1 Thread để thực hiện quá trình tải, giả sử cần tải 100 tệp hình ảnh thì chúng ta phải cần tới 100 Thread hoạt động cùng một thời điểm trong cùng một chương trình. Điều này sẽ dễ dẫn đến lỗi quá tải của chương trình, làm ảnh hưởng đến hiệu suất và có thể dẫn đến gây lỗi (crash) chương trình.
+
+Vì vậy, thay vì tạo các luồng mới khi các task (nhiệm vụ) mới đến, một ThreadPool sẽ giữ một số luồng nhàn rỗi (no task) đã sẵn sàng để thực hiện tác vụ nếu cần. Sau khi một thread hoàn thành việc thực thi một tác vụ, nó sẽ không chết. Thay vào đó nó vẫn không hoạt động trong ThreadPool và chờ đợi được lựa chọn để thực hiện nhiệm vụ mới.
+
+Chúng ta có thể giới hạn một số lượng nhất định các Thread đồng thời trong ThreadPool, rất hữu ích để ngăn chặn quá tải. Nếu tất cả các Thread đang bận rộn thực hiện nhiệm vụ, nhiệm vụ mới được đặt trong một hàng đợi (BlockingQueue), chờ đợi một Thread trở nên có sẵn.
+
+![](https://gpcoder.com/wp-content/uploads/2018/02/threadpool-executor.png)
+
+Java Concurrency API hỗ trợ một vài loại ThreadPool sau:
+
+- Cached thread pool: giữ một số luồng còn sống (alive) và tạo ra các luồng mới nếu cần.
+- Fixed thread pool: giới hạn số lượng tối đa của các Thread được tạo ra để thực thi các task (nhiệm vụ). Các task khác đang chờ trong hàng đợi (BlockingQueue).
+- Single-threaded pool: chỉ giữ một Thread thực thi một nhiệm vụ một lúc.
+- Fork/Join pool: một Thread đặc biệt sử dụng Fork/ Join Framework để tận dụng lợi thế của nhiều bộ vi xử lý để thực hiện công việc lớn nhanh hơn bằng cách chia nhỏ công việc thành các phần nhỏ hơn để xử lý đệ quy.
+
+Trong thực tế, ThreadPool được sử dụng rộng rãi trong các máy chủ web, nơi một ThreadPool được sử dụng để phục vụ các yêu cầu của khách hàng. Thread pool cũng được sử dụng trong các ứng dụng cơ sở dữ liệu nơi mà một ThreadPool được sử dụng để duy trì các kết nối mở với cơ sở dữ liệu.
+
+Việc cài đặt ThreadPool là một công việc phức tạp, nhưng chúng ta không cần phải lo lắng điều này bởi vì Java Concurrency API đã xây dựng sẵn (build-in) các lớp hỗ trợ ThreadPool trong gói java.util.concurrent. Chúng ta sẽ tiếp tục tìm hiểu ở các phần tiếp theo của bài viết này.
+
+Link: https://gpcoder.com/3548-huong-dan-tao-va-su-dung-threadpool-trong-java/
+
+### Executors và Executor
+#### Executors
+Executors có khả năng chạy các task bất đồng bộ và quản lí các thread trong pool, chúng ta không cần phải tạo thủ công các thread mới. Tất cả thread trong pool sẽ được tái sử dụng lại các task khác khi nó đã xong task của mình, chúng ta có thể chạy nhiều task đồng thời trong suốt vòng đời của ứng dụng chỉ với single executor service
+
+Ví dụ sử dụng executors:
+
+```
+ExecutorService executor = Executors.newSingleThreadExecutor();
+executor.submit(() -> {
+    String threadName = Thread.currentThread().getName();
+    System.out.println("Hello " + threadName);
+});
+
+// => Hello pool-1-thread-1
+```
+
+Class Executors cung cấp nhiều factory method tiện ích cho việc tạo các loại executor service khác nhau. 
+
+Link: https://winterbe.com/posts/2015/04/07/java8-concurrency-tutorial-thread-executor-examples/
+
+#### Executor
+
+Một Executor là một đối tượng chịu trách nhiệm quản lý các luồng và thực hiện các tác vụ Runnable được yêu cầu xử lý. Nó tách riêng các chi tiết của việc tạo Thread, lập kế hoạch (scheduling), … để chúng ta có thể tập trung phát triển logic của tác vụ mà không quan tâm đến các chi tiết quản lý Thread.
+
+![](https://gpcoder.com/wp-content/uploads/2018/02/threadpool-executor-service.png)
+
+Java Concurrency API định nghĩa 3 interfaces cơ bản sau cho các Executor:
+
+- Executor: là interface cha của tất cả Executor. Nó xác định chỉ một phương thực excute(Runnable).
+- ExecutorService: là một Executor cho phép theo dõi tiến trình của các tác vụ trả về giá trị (Callable) thông qua đối tượng Future, và quản lý việc kết thúc các luồng. Các phương thức chính của nó bao gồm submit() và shutdown().
+- ScheduledExecutorService: là một ExecutorService có thể lên lịch cho các tác vụ để thực thi sau một khoảng thời gian nhất định, hoặc để thực hiện định kỳ. Các phương thức chính của nó là schedule(), scheduleAtFixedRate() and scheduleWithFixedDelay().
+
+Chúng có thể tạo một Executor bằng cách sử dụng một trong các phương thức được cung cấp bởi lớp tiện ích Executors như sau:
+
+- newSingleThreadExecutor(): trong ThreadPool chỉ có 1 Thread và các task (nhiệm vụ) sẽ được xử lý một cách tuần tự.
+- newCachedThreadPool(): trong ThreadPool sẽ có nhiều Thread và các nhiệm vụ sẽ được xử lý một cách song song. Các Thread cũ sau khi xử lý xong sẽ được sử dụng lại cho nhiệm vụ mới. Mặc định nếu một Thread không được sử dụng trong vòng 60 giây thì Thread đó sẽ bị tắt.
+- newFixedThreadPool(int n): trong ThreadPool sẽ được cố định các Thread. Nếu một nhiệm vụ mới được đưa vào mà các Thread đều đang “bận rộn” thì nhiệm vụ đó sẽ được gửi vào Blocking Queue và sau đó nếu có một Thread đã thực thi xong nhiệm vụ của nó thì nhiệm vụ đang ở trong Queue đó sẽ được push ra khỏi Queue và được Thread đó xử lý tiếp.
+- newScheduledThreadPool(int corePoolSize): tương tự như - newCachedThreadPool() nhưng sẽ có thời gian delay giữa các Thread.
+newSingleThreadScheduledExecutor(): tương tự như newSingleThreadExecutor() nhưng sẽ có khoảng thời gian delay giữa các Thread.
+
+
+# 3. Networking
+## 3.1 Connection pooling
+### Connection pool
+một connection là một bộ đệm duy trì các kết nối tới cơ sở dữ liệu. Các kết nối tới cơ sở dữ liệu sau khi sử dụng sẽ không đóng lại ngay mà sẽ được dùng lại khi được yêu cầu trong tương lai.
+
+Cơ chế hoạt động của nó như sau: khi một connection (một kết nối) được tạo, nó sẽ được đưa vào pool và sử dụng lại cho các yêu cầu kết nối tiếp theo và chỉ bị đóng khi hết thời gian timeout.
+
+Ví dụ, max pool size = 10 (số lượng tối đa connection trong pool là 10).
+
+Bây giờ user kết nối tới database (truy vấn database), hệ thống sẽ kiểm tra trong connection pool có kết nối nào đang rảnh không?
+
+- Trường hợp chưa có kết nối nào trong connection pool hoặc tất cả các kết nối đều bận (đang được sử dụng bởi user khác) và số lượng connection trong connection < 10 thì sẽ tạo một connection mới tới database để kết nối tới database đồng thời kết nối đó sẽ được đưa vào connection pool.
+- Trường hợp tất cả các kết nối đang bận và số lượng connection trong connection pool = 10 thì người dùng phải đợi cho các user dùng xong để được dùng.
+
+Sau khi một kết nối được tạo và sử dụng xong nó sẽ không đóng lại mà sẽ duy trì trong connection pool để dùng lại cho lần sau và chỉ thực sự bị đóng khi hết thời gian timeout (lâu quá không dùng đến nữa)
+
+
+![](https://stackjava.com/wp-content/uploads/2018/04/connection-pool-logic.png)
+
+### Dùng connection pooling vì
+Các bước trong 1 vòng đời kết nối cơ sở dữ liệu:
+1. Mở kết nối tới database bằng database driver
+2. Mở 1 TCP socket để read/write data
+3. Read /  write data
+4. Đóng kết nối
+5. Đóng socket
+
+Ta thấy được việc kết nối database là rất tốn kém, nên cần giảm thiểu hết mức có thể
+
+Vậy nên đó là lí do connection pooling ra đời. Nó đơn giản chỉ là implement 1 container chứa các database connection, cho phép dùng lại số connection có sẵn, ta có thể tiết kiệm 1 lượng lớn chi phí cho performing của việc kết nối database.
+
+link: https://www.baeldung.com/java-connection-pooling
+
+### Các thông tin cấu hình Connection Pool
+Connection Pool thường được cấu hình ở file config của ứng dụng server. Tùy thuộc vào ứng dụng mà bạn có thể có nhiều hơn một connection pool, mỗi connection pool được sử dụng bởi các thành phần khác nhau của ứng dụng. Dưới đây là một số tham số khi cấu hình connection pool:
+
+- Connection pool name: Sử dụng để xác định và đăng ký với datasource.
+- Initial number of connections: Số connection được tạo vào đưa vào connection pool khi ứng dụng được start.
+- Maximum and minimum pool size: Số connection tối đa và tối thiểu trong connection pool
+- JDBC URL: chỉ rõ vị trí database, database name, port, hostname
+- JDBC driver class name.
+
+link: https://stackjava.com/faq/connection-pool-la-gi-khai-niem-connection-pool-trong-database.html
+
+## 3.2 Caching, caching với guava, redis
+### Caching
+Caching là quá trình lưu data trong cache
+
+### Caching với Guava
+#### Guava cache
+Guava hỗ trợ in – memory cache, lưu trữ dữ liệu dưới dạng cặp dữ liệu key – value . Guava chủ yếu hỗ trợ 2 method cache chính đó là LoadingCache và Cache.
+
+- LoadingCache: tự động load dữ liệu vào cache nếu trong cache chưa có dữ liệu
+- Cache: chúng ta phải thực hiện các thao tác kiểm tra sự tồn tại của key trước khi put value vào cache, hay get cache
+
+Guava hỗ trợ thread – seft trong thao tác dữ liệu với cache. Tuy nhiên, Guava không hỗ trợ distributed cache.
+
+#### Guava - Caching Utilities
+- Khai báo interface
+
+```
+@Beta
+@GwtCompatible
+public interface LoadingCache<K,V>
+   extends Cache<K,V>, Function<K,V>
+``` 
+
+- Interface method
+  - ConcurrentMap<K,V> asMap(): trả về tập các entry được lưu trong cache như một thread-safe map
+  - V get(K key): trả về giá trị ứng với key tương ứng trong cache, first loading value đó nếu cần
+  - ImmutableMap<K,V> getAll(Iterable<? extends K> keys): trả về 1 map các key - value, tạo hoặc lấy các value đó nếu cần
+  -  V getUnchecked(K key): giống với get nhưng ko throw checked execption
+  -  void refresh(K key): load 1 value mới cho key, có thể bất đồng bộ
+
+- Ví dụ: 
+
+GuavaTester.java
+```
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.TimeUnit;
+
+import com.google.common.base.MoreObjects;
+import com.google.common.cache.CacheBuilder;
+import com.google.common.cache.CacheLoader;
+import com.google.common.cache.LoadingCache;
+
+public class GuavaTester {
+   public static void main(String args[]) {
+   
+      //create a cache for employees based on their employee id
+      LoadingCache<String, Employee> employeeCache = 
+         CacheBuilder.newBuilder()
+         .maximumSize(100)                             // maximum 100 records can be cached
+         .expireAfterAccess(30, TimeUnit.MINUTES)      // cache will expire after 30 minutes of access
+         .build(new CacheLoader<String, Employee>() {  // build the cacheloader
+            
+            @Override
+            public Employee load(String empId) throws Exception {
+               //make the expensive call
+               return getFromDatabase(empId);
+            } 
+         });
+
+      try {			
+         //on first invocation, cache will be populated with corresponding
+         //employee record
+         System.out.println("Invocation #1");
+         System.out.println(employeeCache.get("100"));
+         System.out.println(employeeCache.get("103"));
+         System.out.println(employeeCache.get("110"));
+         
+         //second invocation, data will be returned from cache
+         System.out.println("Invocation #2");
+         System.out.println(employeeCache.get("100"));
+         System.out.println(employeeCache.get("103"));
+         System.out.println(employeeCache.get("110"));
+
+      } catch (ExecutionException e) {
+         e.printStackTrace();
+      }
+   }
+
+   private static Employee getFromDatabase(String empId) {
+   
+      Employee e1 = new Employee("Mahesh", "Finance", "100");
+      Employee e2 = new Employee("Rohan", "IT", "103");
+      Employee e3 = new Employee("Sohan", "Admin", "110");
+
+      Map<String, Employee> database = new HashMap<String, Employee>();
+      
+      database.put("100", e1);
+      database.put("103", e2);
+      database.put("110", e3);
+      
+      System.out.println("Database hit for" + empId);
+      
+      return database.get(empId);		
+   }
+}
+
+class Employee {
+   String name;
+   String dept;
+   String emplD;
+
+   public Employee(String name, String dept, String empID) {
+      this.name = name;
+      this.dept = dept;
+      this.emplD = empID;
+   }
+   
+   public String getName() {
+      return name;
+   }
+   
+   public void setName(String name) {
+      this.name = name;
+   }
+   
+   public String getDept() {
+      return dept;
+   }
+   
+   public void setDept(String dept) {
+      this.dept = dept;
+   }
+   
+   public String getEmplD() {
+      return emplD;
+   }
+   
+   public void setEmplD(String emplD) {
+      this.emplD = emplD;
+   }
+
+   @Override
+   public String toString() {
+      return MoreObjects.toStringHelper(Employee.class)
+      .add("Name", name)
+      .add("Department", dept)
+      .add("Emp Id", emplD).toString();
+   }	
+}
+```
+
+Output:
+```
+Invocation #1
+Database hit for100
+Employee{Name=Mahesh, Department=Finance, Emp Id=100}
+Database hit for103
+Employee{Name=Rohan, Department=IT, Emp Id=103}
+Database hit for110
+Employee{Name=Sohan, Department=Admin, Emp Id=110}
+Invocation #2
+Employee{Name=Mahesh, Department=Finance, Emp Id=100}
+Employee{Name=Rohan, Department=IT, Emp Id=103}
+Employee{Name=Sohan, Department=Admin, Emp Id=110}
+```
+
+link: https://www.tutorialspoint.com/guava/guava_quick_guide.htm
+
+### Caching với redis
+
+## 3.3 Khái niệm cơ bản về protocol trong networking.
+### HTTP
+HTTP ( HyperText Transfer Protocol): Giao thức truyền tải siêu văn bản là một trong năm giao thức chuẩn của mạng Internet, được dùng để liên hệ thông tin giữa Máy cung cấp dịch vụ (Web server) và Máy sử dụng dịch vụ (Web client) trong mô hình Client/Server dùng cho World Wide Web-WWW, HTTP là một giao thức thuộc tầng ứng dụng, nằm trên cặp giao thức tầng giao vận & tầng mạng là TCP/IP.
+
+### Websocket
+Websocket: là một giao thức giúp truyền dữ liệu hai chiều giữa server-client qua một kết nối TCP duy nhất. Hơn nữa, webSocket là một giao thức được thiết kế để truyền dữ liệu bằng cách sử dụng cổng 80 và cổng 443 và nó là một phần của HTML5. Vì vậy, webSockets có thể hoạt động trên các cổng web tiêu chuẩn, nên không có rắc rối về việc mở cổng cho các ứng dụng, lo lắng về việc bị chặn bởi các tường lửa hay proxy server
+
+Không giống với giao thức HTTP là cần client chủ động gửi yêu cầu cho server, client sẽ chời đợi để nhận được dữ liệu từ máy chủ. Hay nói cách khác với giao thức Websocket thì server có thể chủ động gửi thông tin đến client mà không cần phải có yêu cầu từ client.
+
+Tất cả dữ liệu giao tiếp giữa client-server sẽ được gửi trực tiếp qua một kết nối cố định làm cho thông tin được gửi đi nhanh chóng và liên tục khi cần thiết. WebSocket làm giảm độ trễ bởi vì một khi kết nối WebSocket được thành lập, server không cần phải chờ đợi cho một yêu cầu từ client.
+
+Tương tự như vậy, client có thể gửi tin nhắn đến server bất cứ lúc nào. Yêu cầu duy nhất này giúp làm giảm đáng kể độ trễ, mà sẽ gửi một yêu cầu trong khoảng thời gian, cho dù thông điệp có sẵn.
+
+Để có thể sử dụng được Websocket thì không phải chỉ cần trình duyệt hỗ trợ mà còn phải có server Websocket, server Websocket có thể được tạo ra bằng bất kỳ ngôn ngữ server-side nào, nhưng Node.js được sử dụng rộng rãi hơn cả vì nó viết bằng Javascript nên mang nhiều ưu điểm so với các ngôn ngữ server-side truyền thống khác.
+
+#### Hoạt động:
+![](https://images.viblo.asia/34e0ae36-e850-49f4-8d61-8aa1ab312d3e.jpg)
+
+Giao thức có hai phần: Bắt tay và truyền dữ liệu Ban đầu client sẽ gửi yêu cầu khởi tạo kết nối websocket đến server, server kiểm tra và gửi trả kết quả chấp nhận kết nối, sau đó kết nối được tạo và quá trình gửi dữ liệu có thể được thực hiện, dữ liệu chính là các Ws frame
+
+Link: https://viblo.asia/p/co-ban-ve-giao-thuc-websocket-va-thu-vien-socketio-63vKjmmM52R
+
+
+### gRPC
+- Remote Procedure Call  (RPC) – Thủ tục gọi hàm từ xa là một kỹ thuật tiến bộ cho quá trình kết nối từ Client đến Server để sử dụng các ứng dụng và dịch vụ. RPC cho phép client có thể kết nối tới 1 dịch vụ sử dụng dynamic port nằm ở một máy tính khác. Trong hệ thống mạng máy tính hiện nay có rất nhiều dịch vụ và ứng dụng sử dụng cơ chế kết nối RPC, ví dụ quá trình đồng bộ của các Domain Controller trong hệ thống  Active Directory, hoặc khi MS Outlook kết nối tới MS Exchange Server… 
+
+RPC có thể được xem là một giao thức request & respone thông thường. Tuy nhiên, nó được dùng cho việc giao tiếp giữa các server với nhau (server-server) nhiều hơn là client-server. Việc này có ý nghĩa rất quan trọng, vì trong các hệ thống phân tán – distributed system – application code ở nhiều server hơn là một server. Ví dụ thường thấy nhất chính là kiến trúc Microservice.
+
+Điều này nghĩa là, một request từ phía client có thể cần nhiều service, chạy trên nhiều server, tổng hợp thông tin rồi sau đó mới response cho client.
+
+Sự liên lạc giữa các service trên các server lúc này sẽ là vấn đề – mà trước đó tất cả service chạy trên cùng một server thì khoẻ re, vì local call nên chẳng ngần ngại gì cả. Chính xác là khi đó, một server muốn “nói chuyện” với server khác sẽ cần phải encode data (JSON, XML, …), phía nhận cũng phải làm công việc ngược lại, là decode data mới hiểu thằng kia nói gì với mình, rồi lại phải encode tiếp. Việc này tiêu tốn khá nhiều tài nguyên xử lý (CPU) mà lẽ ra chỉ cần làm ở bước đầu và cuối (đầu nhận và trả về cuối cùng).
+
+Tối ưu cho việc “giao tiếp” giữa các server là lý do gRPC ra đời.
+
+Để giải bài toán trên, gRPC sử dụng binary để truyền đi, thay vì phải encode chúng thành các ngôn ngữ trung gian như JSON, XML, …
+
+- gRPC: là một modern open source high performance RPC framework, có thể chạy với bất kì môi trường nào. 
+
+![](https://gopherhome.files.wordpress.com/2018/12/gopher-grpc-at-a-glance.png)
+
+Việc này rõ ràng làm tăng tốc độ giao tiếp giữa các server lên rất nhiều, đồng thời giảm overhead cho CPUs. Google cũng “tiện tay” làm luôn cả protobuf (protocol buffers), đây là ngôn ngữ mà gRPC dùng như một default serialization format. Implement phần này thật sự phải là tay to lắm nên Google xử dụng protobuf như một script trung gian để generate phần “hard core” cho các lập trình viên ở các ngôn ngữ phổ biến như: C++, C#, Go, Java, Python, NodeJS….
+
+Thứ giúp gRPC giao tiếp binary ngon vậy chính là HTTP/2, đây vốn là giao thức có rất nhiều cải tiến so với HTTP/1.1. Bản thân HTTP/2 cũng được coi như là sự thay thế cho SPDY – giao thức mà cũng chính Google phát triển – open source vào năm 2012 và ngừng hỗ trợ vào 2015 (HTTP/2 có implement và thay thế rồi).
+
+link: 
+https://gopher.vn/2018/08/11/grpc-la-gi-co-nen-dung-khong/
+
+https://grpc.io/docs/guides/
+
+## 3.4 SSL / TLS
+SSL là chữ viết tắt của Secure Sockets Layer (Lớp socket bảo mật). Một loại bảo mật giúp mã hóa liên lạc giữa website và trình duyệt. Công nghệ này đang lỗi thời và được thay thế hoàn toàn bởi TLS.
+
+TLS là chữ viết tắt của Transport Layer Security, nó cũng giúp bảo mật thông tin truyền giống như SSL. Nhưng vì SSL không còn được phát triển nữa, nên TLS mới là thuật ngữ đúng nên dùng.
+
+### Kiểm tra SSL/TLS
+Khi chúng ta trao đổi thông tin quan trọng thì việc kiểm tra xem site đó có đối ứng SSL/TLS hay không là việc cần thiết. Ở trang web được cài SSL/TLS, URL [http://] hiển thị ở thanh address của trình duyệt được gắn thêm [s] thể hiện secure thành [https://] .
+
+### SSL/TLS server certificate
+
+Chứng chỉ SSL/TLS hoạt động bằng cách tích hợp key mã hóa vào thông tin định danh công ty. Nó sẽ giúp công ty mã hóa mọi thông tin được truyền mà không bị ảnh hưởng hoặc chỉnh sửa bởi các bên thứ 3.
+
+![](https://www.hostinger.vn/huong-dan/wp-content/uploads/sites/10/2018/12/thiet-lap-ket-noi-an-toan-voi-server.png)
+
+SSL/TLS hoạt động bằng cách sử dụng public và private key, đồng thời các khóa duy nhất của mỗi phiên giao dịch. Mỗi khi khách truy cập điền vào thanh địa chỉ SSL thông tin web browser hoặc chuyển hướng tới trang web được bảo mật, trình duyệt và web server đã thiết lập kết nối.
+
+Trong phiên kết nối ban đầu, public và private key được dùng để tạo session key, vốn được dùng để mã hóa và giải mã dữ liệu được truyền đưa. Session key sẽ được sử dụng trong một khoảng thời gian nhất định và chỉ có thể dùng cho phiên giao dịch này.
+
+Nếu có khóa màu xanh ngay đầu địa chỉ web thì tức là website đã thiết lập đúng SSL/TLS. Bạn có thể nhấn vào nút màu xanh đó để xem ai là người giữ chứng chỉ này.
+
+### Khi nào và vì sao SSL/TLS là một điều BẮT BUỘC?
+Có 3 lý do chính mà một website hiện đại buộc phải có SSL/TLS:
+- Khi bạn cần chứng thực: Bất kỳ server nào cũng có thể giả dạng là server của bạn, đánh cắp thông tin được truyền đưa. SSL/TLS cho phép bạn xác thực danh tính của server để người dùng biết chắc họ đang giao tiếp với đúng người mà họ muốn giao tiếp.
+- Để tăng độ tin cậy: Nếu bạn đang chạy một site ecommerce mà bạn cần người dùng đưa các thông tin quan trọng đối với họ, thì ít nhất họ cần biết thông tin họ gửi phải được bảo mật trước thì họ mới tin bạn. Sử dụng SSL/TLS là cách dễ nhất để cho khách truy cập tin tưởng, hơn bất kỳ lời cam kết nào được đưa ra từ phía bạn.
+- Khi bạn cần tuân thủ chuẩn của ngành của bạn: Trong một số ngành nhất định, như ngành tài chính, bạn sẽ bắt buộc áp dụng một số chuẩn bảo mật. Bạn cũng có thể tham khảo chỉ dẫn về Payment Card Industry (PCI) mà bạn cần tuân thủ nếu bạn muốn nhận thanh toán qua thẻ tín dụng trên website của bạn. Một trong số các yêu cầu thiết yếu là việc sử dụng chứng chỉ SSL/TLS.
+
+Link: 
+https://www.hostinger.vn/huong-dan/https-tls-ssl-la-gi/
+
+https://viblo.asia/p/ssltls-la-gi-Do754wnBlM6
+
+## 3.5 RESTful API 
+RESTful API là một tiêu chuẩn dùng trong việc thiết kế API cho các ứng dụng web (thiết kế Web services) để tiện cho việc quản lý các resource. Nó chú trọng vào tài nguyên hệ thống (tệp văn bản, ảnh, âm thanh, video, hoặc dữ liệu động…), bao gồm các trạng thái tài nguyên được định dạng và được truyền tải qua HTTP.
+
+![](https://topdev.vn/blog/wp-content/uploads/2019/04/restful-api.jpg)
+
+API (Application Programming Interface) là một tập các quy tắc và cơ chế mà theo đó, một ứng dụng hay một thành phần sẽ tương tác với một ứng dụng hay thành phần khác. API có thể trả về dữ liệu mà bạn cần cho ứng dụng của mình ở những kiểu dữ liệu phổ biến như JSON hay XML.
+
+REST (REpresentational State Transfer) là một dạng chuyển đổi cấu trúc dữ liệu, một kiểu kiến trúc để viết API. Nó sử dụng phương thức HTTP đơn giản để tạo cho giao tiếp giữa các máy. Vì vậy, thay vì sử dụng một URL cho việc xử lý một số thông tin người dùng, REST gửi một yêu cầu HTTP như GET, POST, DELETE, vv đến một URL để xử lý dữ liệu.
+
+RESTful API là một tiêu chuẩn dùng trong việc thiết kế các API cho các ứng dụng web để quản lý các resource. RESTful là một trong những kiểu thiết kế API được sử dụng phổ biến ngày nay để cho các ứng dụng (web, mobile…) khác nhau giao tiếp với nhau.
+
+Chức năng quan trọng nhất của REST là quy định cách sử dụng các HTTP method (như GET, POST, PUT, DELETE…) và cách định dạng các URL cho ứng dụng web để quản các resource. RESTful không quy định logic code ứng dụng và không giới hạn bởi ngôn ngữ lập trình ứng dụng, bất kỳ ngôn ngữ hoặc framework nào cũng có thể sử dụng để thiết kế một RESTful API.
+
+### Hoạt động của RESTful
+![](https://topdev.vn/blog/wp-content/uploads/2019/04/restful-rest-diagram-api.jpg)
+
+REST hoạt động chủ yếu dựa vào giao thức HTTP. Các hoạt động cơ bản nêu trên sẽ sử dụng những phương thức HTTP riêng.
+
+- GET (SELECT): Trả về một Resource hoặc một danh sách Resource.
+- POST (CREATE): Tạo mới một Resource.
+- PUT (UPDATE): Cập nhật thông tin cho Resource.
+- DELETE (DELETE): Xoá một Resource.
+
+Những phương thức hay hoạt động này thường được gọi là CRUD tương ứng với Create, Read, Update, Delete – Tạo, Đọc, Sửa, Xóa.
+
+Hiện tại đa số lập trình viên viết RESTful API giờ đây đều chọn JSON là format chính thức nhưng cũng có nhiều người chọn XML làm format, nói chung dùng thế nào cũng được miễn tiện và nhanh.
+
+REST là viết tắt của cụm từ Representational State Transfer và các ứng dụng sử dụng kiểu thiết kế REST thì được gọi là RESTful (-ful là tiếp vị ngữ giống như beauty và beautiful). Tất nhiên bạn cũng có thể sử dụng thuật ngữ REST thay cho RESTful và ngược lại.
+
+
+### Nguyên tắt thiết kế của REST API
+1. Dùng HTTP method rõ ràng như sau.
+
+Chúng ta có 4 HTTP method cơ bản bao gồm POST, GET, PUT, DELETE. Với mỗi method sẽ ứng với một chức năng tương ứng của API là tạo, đọc, sửa và xoá. Như sau nè:
+
+![](https://cdn-images-1.medium.com/max/800/1*YRFNzFCvu0gdRHWoTOctPw.png)
+
+2. Sử dụng danh từ số nhiều và không sử dụng động từ.
+
+Ví dụ như /dogs, /cats,... chứ không phải là /getAllDog,...
+
+3. Chỉ sử dụng danh từ số nhiều.
+Không vừa dùng số nhiều vừa dùng số ít.
+
+4. Versioning
+Versioning là một điều bắt buộc với tất cả resource, việc đánh version cho resource tuân thủ 2 nguyên tắc sau:
+
+- Bắt đầu bằng “v” và kết thúc bằng một số nguyên dương , tránh dùng số thập phân (dùng v1 thay vì v1.5)
+- Versioning sẽ được đặt ở vị trí đầu tiên của resource
+
+
+### Authentication và dữ liệu trả về
+
+RESTful API không sử dụng session và cookie, nó sử dụng một access_token với mỗi request. Dữ liệu trả về thường có cấu trúc như sau:
+
+```
+{
+    "data" : {
+        "id": "1",
+        "name": "TopDev"
+    }
+}
+```
+
+### Status code
+Khi chúng ta request một API nào đó thường thì sẽ có vài status code để nhận biết sau:
+
+- 200 OK – Trả về thành công cho những phương thức GET, PUT, PATCH hoặc DELETE.
+- 201 Created – Trả về khi một Resouce vừa được tạo thành công.
+- 204 No Content – Trả về khi Resource xoá thành công.
+- 304 Not Modified – Client có thể sử dụng dữ liệu cache.
+- 400 Bad Request – Request không hợp lệ
+- 401 Unauthorized – Request cần có auth.
+- 403 Forbidden – bị từ chối không cho phép.
+- 404 Not Found – Không tìm thấy resource từ URI
+- 405 Method Not Allowed – Phương thức không cho phép với user hiện tại.
+- 410 Gone – Resource không còn tồn tại, Version cũ đã không còn hỗ trợ.
+- 415 Unsupported Media Type – Không hỗ trợ kiểu Resource này.
+- 422 Unprocessable Entity – Dữ liệu không được xác thực
+- 429 Too Many Requests – Request bị từ chối do bị giới hạn
+
+Link: 
+https://topdev.vn/blog/restful-api-la-gi/
+
+https://viblo.asia/p/cau-chuyen-cua-restful-api-Qpmle24N5rd
+
+## 4 Benchmark
+### 4.1 Benchmark
+Benchmark là đánh giá, cũng tương tự gần như review (đánh giá), nhưng nó không phải là đánh giá toàn bộ mà là chỉ đánh giá một phần của thiết bị phần cứng hoặc phần mềm cần đánh giá, một phần của review. Bản thân review có thể có hoặc không có phần benchmark.
+
+Điểm benchmark là giá trị cho biết tốc độ của một thiết bị có nhanh hay không, có thực sự nổi bật hay không.
+
+Các dạng Benchmark
+Chúng ta có thể có 2 dạng Benchmark theo tiêu chí mà người dùng muốn sử dụng để đo tốc độ.
+- Tiêu chí về phần cứng ta có đo điểm Benchmark của CPU, GPU, RAM, HDD.
+- Tiêu chí về phần mềm ta có đo điểm Benchmark về game, về thiết kế, về công nghệ, vv...
+
+### Các tool hỗ trợ benchmark hệ thống dành cho Java
+#### JMeter
+JMeter là công cụ mã nguồn mở rất phổ biến trong việc kiểm thử khả năng chịu tải cho website. Apache Jmeter là một ứng dụng của Java được thiết kế đặc biệt cho khả năng đo hiệu suất.
+
+![](https://cuongquach.com/resources/images/2017/11/apache-jmeter.jpg)
+
+Ưu điểm:
+- Có khả năng kiểm thử với một loạt các công nghệ như Java Objects, Web HTTP/HTTPS, SOAP và Rest Services, FTP, Database với JDBC.
+- Một IDE (Integrated Development Environment) tốt để bạn có thể sử dụng để ghi lại, xây dựng và gỡ lỗi các bài kiểm tra hiệu năng của bạn.
+- Từ phiên bản JMeter 3.1 thì Groovy là ngôn ngữ lập trình mặc định.
+- Một trong những công cụ kiểm tra hiệu suất phổ biến nhất.
+- Nguồn mở, miễn phí
+- Giao diện đơn giản, trực quan dễ sử dụng
+- JMeter lưu các kịch bản kiểm thử của nó dưới dạng các file XML, do đó ta có thể tự tạo các kịch bản kiểm thử của mình bằng một trình soạn thảo bất kỳ và load nó lên
+- Đa luồng, giúp xử lý tạo nhiều request cùng một khoảng thời gian, xử lý các dữ liệu thu được một cách hiệu quả
+
+Nhược điểm:
+- Gặp khó khăn khi mở rộng quy mô xử lý những bài test phân phối lớn. Đặc biệt nếu bạn thiết lập một cụm máy thì bạn phải cấu hình để chúng có thể trao đổi với nhau.
+- Gặp một loạt các vấn đề dàn xếp khi thực hiện các bài kiểm tra lớn.
+
+**Các thành phần cơ bản của jmeter**
+JMeter cung cấp tất cả những thành phần cơ bản để phục vụ cho việc thiết kế kế hoạch, thực thi và giám sát kết quả trong suốt quá trình test. Những thành phần cơ bản của JMeter là:
+
+- Thread Group: Một Thread Group đại diện cho một nhóm người dùng, và nó chứa tất cả những yếu tố khác.Mỗi Thread Group sẽ mô phỏng những người dùng để thực hiện một trường hợp thử nghiệm cụ thể. Thread Group cho phép tester thực hiện những tùy chỉnh về:
+  - Số lượng Thread: Mỗi Thread đại diện cho một người dùng ảo, JMeter cho phép thay đổi số lượng người dùng không hạn chế để thực hiện các thử nghiệm.
+  - Ram-Up Period: Thời gian để bắt đầu tất cả những Thread.
+  - Loop Count: Số lần lặp lại những yêu cầu của người dùng. Ngoài ra còn có những tùy chọn khác như việc chạy các Thread vào lịch biểu định sẵn, xác định hành động sẽ thực hiện khi xảy ra lỗi…
+
+
+- Controller ( Sampler và Logic Cotroller ): JMeter cung cấp hai dạng Controller: Sampler và Logic Controller, trong đó: - Sampler ( lấy mẫu ): Cho phép JMeter gửi những yêu cầu cụ thể đến một máy chủ. - Logic Controller: Tùy biến việc khi nào thì gửi yêu cầu. Các thành phần Controller được tạo ra để định nghĩa kịch bản thực tế của người dùng bằng việc ghi lại những yêu cầu cụ thể của người dùng tới một server xác định.Cụ thể đối với kiểm thử website thì đó là những HTTP Request được gửi đến server của người dùng.
+
+- Listener: Công cụ Listener mà JMeter cung cấp cho phép xem những kết quả thu được từ việc chạy thử nghiệm dưới các dạng khác nhau như: đồ thị, bảng biểu, cây.. Các listeners sẽ cung cấp một cách trực quan nhất những dữ liệu thu thập được từ việc thực thi các Test case. Tester cũng sẽ có thể tùy chỉnh những thông tin mà Listener trả về một cách dễ dàng bởi các tính năng trong giao diện cụ thể của từng Listener. Có rất nhiều dạng Listener được JMeter cung cấp, có thể kể đến một số Listener thường được sử dụng để cung cấp như:
+  - Graph Full Results: Cung cấp tất cả những kết quả trả về dưới dạng đồ thị : Lỗi, thời gian phản hồi, lưu lượng …
+  - View Results in Table: Hiển thị những thông số về thời gian phản hồi của từng yêu cầu, những yêu cầu thực hiện thành công và thất bại… dưới dạng bảng.trong suốt quá trình thực thi thử nghiệm.
+  - Summary Report : Cung cấp những thống kê tổng thể.
+  - Timer: Timer là một phần rất quan trọng khi xây dựng một Test Plan, nó cho phép cài đặt khoảng thời gian giữa 2 yêu cầu kế tiếp nhau mà người dùng ảo gửi đến máy chủ. Điều này sẽ tạo ra một mô phỏng thực tế nhất so với hoạt động thực tế của người dùng trên website. JMeter cung cấp nhiều Timer với các dạng khác nhau để thiết lập thời gian nghỉ giữa việc thực hiện 2 yêu cầu , như :
+    - Constant Timer: xác lập thời gian là một hằng số.
+    - Uniform Random Timer: xác lập thời gian nghỉ ở một khoảng xác định.
+  - Assertion: là công cụ có tác dụng xác nhận những dữ liệu mà Website trả về có đúng với yêu cầu đặt ra hay không.
+
+
+
+#### Locust
+![](https://cuongquach.com/resources/images/2017/11/locust-logo.jpg)
+
+Đây là công cụ kiểm tra tải đơn giản, dễ sử dụng và dễ phân phối và tất nhiên nó được sử dụng để kiểm thử tải trang web rồi. Locust cũng có thể giúp bạn tìm ra bao nhiêu người dùng truy cập đồng thời trên web mà hệ thống có thể xử lý được. Bạn cũng có thể xác định hành vi mà bạn muốn cho từng trường hợp kiểm thử. Ngoài ra Locust còn cung cấp giao diện web để bạn theo dõi quá trình benchmark theo thời gian thực.
+
+Ưu điểm:
+- Khả năng tạo kịch bản cho bài test bằng python.
+- Dễ dàng quy mô số người truy cập mà bạn cần.
+- Giao diện trên nền web rất chất, đẹp.
+- Có khả năng mở rộng.
+- Hiệu quả trong việc test các API.
+- Trên Github hiện tại nó đang được 6293 sao đấy nhé.
+
+Nhược điểm:
+- Hiện tại chưa thấy nhiều báo cáo về nhược điểm của Locust cả, tuy nhiên bản thân mình thấy thì Locust chỉ sử dụng được khi OS cài python 2.7, 3.3, 3.4, 3.5, và 3.6.
+- Mình lab thử trên CentOS 6 thì phải cài thêm python 2.7 vì trên CentOS 6 chỉ mặc định cài python 2.6 mà thôi, hơi bất tiện xíu nhưng không sao.
+
+Link: https://cuongquach.com/top-10-cong-cu-ma-nguon-mo-kiem-tra-tai-website-phan-1.html
+
+https://viblo.asia/p/mojito-huong-dan-su-dung-jmeter-de-test-performance-cho-he-thong-website-bJzKmLGO59N
+
+## 5. JVM
+## 5.1 JVM
+JVM (Java Virtual Machine) là 1 máy ảo java - trình thông dịch của Java. Nó cung cấp môi trườngink để code java có thể được thực tinkhi, chương trình Java khi biên dinkịch sẽ tạo ra các file *.class chứaink byte code , Các file *.class này inksẽ được JVM thực hiện chuyển byte coinkde thành mã máy tương ứng với tinkừng hệ điều hành và phần cứng khác inknhau thực thi. Các bạn có thể thainkm khảo cơ chế thực hiện 1 chương trình Java trong sơ đồ dưới đây :
+
+![](https://viblo.asia/uploads/4081ff8d-dbbc-46fe-8d02-42b5a62cc2c0.png)
+
+JVM là:
+- A specification: Nơi làm việc của JVM được quy định.JVM cung cấp các thuật toán đọc lập được cung cấp bởi Sun và nhiều công ty phát triển phần mềm khác.
+- An implementation: 1 implemention được biết đến chính là JRE. JRE là một ứng dụng nền giúp thực thi các file mã máy đã được biên dịch từ file nguồn *.java. Các thành phần của JRE chỉ bao gồm các gói Java và thư viện thực thi ứng dụng (runtime libraries) nên JRE không có khả năng biên dịch file Java thành mã máy chỉ có khả năng thực thi các file byte code sau khi đã được JDK biên dịch.
+- Runtime Instance : Bất cứ khi nào bạn viết lệnh java trên dấu nhắc lệnh để chạy các lớp java, và instance của JVM được tạo ra.
+
+Hoạt động:
+JVM thực hiện các công việc sau:
+- Loads code - tải mã lệnh
+- Verifies code - Kiểm tra mã lệnh
+- Executes code - thực thi mã lệnh
+- Provides runtime environment - công cấp môi trường biên dịch mã
+
+### Kiến trúc bên trong JVM
+Nó chứa classloader, khu vực bộ nhớ, bộ máy thực thi,...
+
+![](https://viblo.asia/uploads/03cc91ac-abf2-40db-896e-035692c253ac.png)
+
+1. Classloader:
+Classloader là một hệ thống phụ của JVM được sử dụng để tải các file class.
+
+2. Class (Method) Area:
+Cửa hàng lớp (Method): Vùng chứa các class và cung cấp các class nền tảng cho phép mở rộng hoặc ghi đè lên nó
+
+3. Heap
+Đây là khu vực dữ liệu thời gian chạy trong đó các đối tượng được phân bổ.
+
+4. Stack
+Java stack store frames. Nó lưu trữ các biến địa phương và kết quả từng phần, và đóng một phần trong phương pháp gọi và trở về.
+
+Mỗi thread cung cấp 1 JVM stack riêng, được tạo cùng thời gian với thread.
+
+Một new frame được tạo ra mỗi lần method được gọi. Một frame bị hủy khi method được gọi của nó hoàn thành.
+
+5. Program Counter Register:
+
+PC (đếm chương trình) đăng ký. Nó chứa địa chỉ của các máy ảo Java hướng dẫn hiện đang được thực hiện.
+
+6. Native Method Stack
+Nó chứa tất cả các phương pháp có nguồn gốc được sử dụng trong các ứng dụng.
+
+
+7. Execution Engine:
+Nó chứa:
+- Một bộ xử lý ảo
+
+- Phiên dịch: Đọc dòng bytecode sau đó thực hiện các hướng dẫn.
+
+- Just-In-Time (JIT) biên dịch: Nó được sử dụng để cải thiện performance.JIT biên dịch các phần của mã byte có chức năng tương tự như cùng một lúc, và do đó làm giảm số lượng thời gian cần thiết cho compilation.Thuật ngữ: trình biên dịch: đề cập đến như một dịch giả từ những hướng dẫn của một máy ảo Java (JVM) cho các tập lệnh của CPU cụ thể.
+
+Link: https://viblo.asia/p/kien-truc-jvm-java-virtual-machine-ogBG29o6MxnL
+
+## 5.2 JRE
+Runtime enviroment là một phần mềm được thiết kế để chạy các phần mềm khác. Là runtime enviroment cho Java, JRE chứa các thư viện lớp Java, trình tải lớp Java và Máy ảo Java. Trong hệ thống này:
+
+- Trình tải lớp chịu trách nhiệm tải chính xác các lớp và kết nối chúng với các thư viện lớp Java cốt lõi.
+- JVM chịu trách nhiệm đảm bảo các ứng dụng Java có tài nguyên mà chúng cần để chạy và hoạt động tốt trong thiết bị hoặc môi trường đám mây của bạn.
+- JRE chủ yếu là một thùng chứa cho các thành phần khác và chịu trách nhiệm điều phối các hoạt động của chúng.
+
+### Runtime Enviroment
+Một chương trình phần mềm cần phải thực thi và để thực hiện nó cần một môi trường để chạy. Runtime Enviroment tải các tệp lớp và đảm bảo có quyền truy cập vào bộ nhớ và các tài nguyên hệ thống khác để chạy chúng. Trước đây, hầu hết các phần mềm đều sử dụng hệ điều hành (HĐH) làm Runtime Enviroment. Chương trình chạy bên trong bất kỳ máy tính nào được bật, nhưng dựa vào cài đặt hệ điều hành để truy cập tài nguyên. Tài nguyên trong trường hợp này sẽ là những thứ như bộ nhớ và tệp chương trình và dependencies. Java Runtime Enviroment đã thay đổi tất cả, ít nhất là đối với các chương trình Java.
+
+JRE chứa các thư viện và phần mềm mà các chương trình Java của bạn cần chạy. Ví dụ, trình tải lớp Java là một phần của Java Runtime Environment. Phần mềm quan trọng này tải mã Java được biên dịch vào bộ nhớ và kết nối mã với các thư viện lớp Java thích hợp.
+
+### Cách JRE hoạt động với JVM
+Java Virtual Machine là một hệ thống phần mềm đang chạy chịu trách nhiệm thực thi các chương trình Java trực tiếp. JRE là hệ thống trên đĩa lấy mã Java của bạn, kết hợp nó với các thư viện cần thiết và khởi động JVM để thực thi nó.
+
+![](https://images.viblo.asia/b4e3484f-fdde-4063-a947-53527ed7060a.png)
+
+### Bộ nhớ Java và JRE
+Bộ nhớ Java bao gồm ba thành phần: heap, stack và metaspace (trước đây được gọi là permgen).
+
+- Metaspace là nơi Java giữ thông tin không thay đổi của chương trình như các định nghĩa lớp.
+- Không gian heap (Heap space) là nơi Java giữ nội dung biến(variable content).
+- Không gian ngăn xếp (Stack space) là nơi Java lưu trữ thực thi hàm(function execution) và tham chiếu biến(variable references).
+
+
+## 5.3 JDK 
+JDK (Java Development Kit): JRE có thể được sử dụng như một thành phần độc lập để chạy các chương trình Java, nhưng nó cũng là một phần của JDK. JDK yêu cầu JRE vì chạy các chương trình Java là một phần của việc phát triển chúng.
+
+![](https://images.viblo.asia/0fa40581-96db-4353-8b0a-269848407ee5.png)
+
+Các định nghĩa:
+
+- Định nghĩa kỹ thuật: JDK là một triển khai của đặc tả nền tảng Java, bao gồm các trình biên dịch và thư viện lớp.
+- Định nghĩa hàng ngày: JDK là gói phần mềm bạn tải xuống để tạo các ứng dụng dựa trên Java.
+
+Link: https://viblo.asia/p/jvm-jdk-jre-co-gi-khac-biet-giua-chung-oOVlYBXV58W
+
+## 6.  Monitoring
+
+## 7.  Useful library
