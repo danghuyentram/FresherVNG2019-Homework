@@ -1,22 +1,26 @@
 package rockPaperScissors.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class History {
     private String userName;
     private Integer idGame;
     private Date dateTimePlay;
     private Integer resultGame;
-    private Integer idTurn;
-    private Integer resultTurn;
+    private List<Turn> turns;
 
-    public History(String userName,Integer idGame,Date dateTimePlay,Integer resultGame,Integer idTurn, Integer resultTurn){
+//    private Integer idTurn;
+//    private Integer resultTurn;
+
+    public History(String userName,Integer idGame,Date dateTimePlay,Integer resultGame){
         this.userName = userName;
         this.idGame = idGame;
         this.dateTimePlay  = dateTimePlay;
         this.resultGame = resultGame;
-        this.idTurn = idTurn;
-        this.resultTurn = resultTurn;
+//        this.turns = turns;
+//        this.idTurn = idTurn;
+//        this.resultTurn = resultTurn;
     }
 
 
@@ -52,19 +56,27 @@ public class History {
         this.resultGame = resultGame;
     }
 
-    public Integer getIdTurn() {
-        return idTurn;
+    public List<Turn> getTurns() {
+        return turns;
     }
 
-    public void setIdTurn(Integer idTurn) {
-        this.idTurn = idTurn;
+    public void setTurns(List<Turn> turns) {
+        this.turns = turns;
     }
 
-    public Integer getResultTurn() {
-        return resultTurn;
-    }
-
-    public void setResultTurn(Integer resultTurn) {
-        this.resultTurn = resultTurn;
-    }
+//    public Integer getIdTurn() {
+//        return idTurn;
+//    }
+//
+//    public void setIdTurn(Integer idTurn) {
+//        this.idTurn = idTurn;
+//    }
+//
+//    public Integer getResultTurn() {
+//        return resultTurn;
+//    }
+//
+//    public void setResultTurn(Integer resultTurn) {
+//        this.resultTurn = resultTurn;
+//    }
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image gallery</title>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+
+<script src="script.js"></script>
+
+<body >
+        <h1>Image gallery</h1>
+        <div class="image-upload">
+                <label for="browse">
+                  <img src="../icon/upload.png" class="icon"/>
+                </label>
+                <img src="../icon/trash.png" class="icon" id="delete" onclick="deleteImg()"/>
+
+                <input id="browse" type="file" onchange="previewFiles()" multiple >
+        </div>
+
+        <div id="photos"></div>
+    
+
+</body>
+</html>

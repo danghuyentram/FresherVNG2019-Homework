@@ -1,0 +1,96 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.rockPaperScissors.grpc.gamerps;
+
+
+message UserRequest {
+    string userName = 1;
+    string userPassword = 2;
+}
+
+message TokenMessage{
+    string token = 1 ;
+}
+
+message LoginResponse{
+    int32 status=1;
+    string message = 2;
+    TokenMessage token = 3;
+}
+
+message SignupResponse{
+    int32 status=1;
+    string message = 2;
+}
+
+message NewGameRequest{
+    TokenMessage token =1;
+}
+
+message NewGameResponse{
+    int32 id =1;
+    int32 status=2;
+    string message = 3;
+}
+
+message TurnRequest{
+    TokenMessage token =1;
+    int32 idGame = 2;
+    int32 userStep = 3;
+}
+
+message TurnResponse{
+    int32 status=1;
+    string message = 2;
+
+}
+
+message InforRequest{
+    TokenMessage token =1;
+
+}
+
+message TurnDetail{
+    int32 id = 1;
+    int32 botStep = 2;
+    string dateTimePlay = 3;
+    int32 result =4;
+    int32 userStep = 5;
+}
+
+
+
+message GameDetail{
+    int32 id =1;
+    string dateTimePlay = 2;
+    int32 result = 3;
+    repeated TurnDetail turnDetails = 4;
+}
+
+message HistoryResponse{
+    int32 status=1;
+    string message = 2;
+    repeated GameDetail gameDetails = 3;
+}
+
+message UserRate{
+    string username = 1;
+    float winRate = 2;
+}
+
+message Top100Reponse{
+    int32 status=1;
+    string message = 2;
+    repeated UserRate userRates= 3;
+}
+
+service GameRPS {
+
+    rpc loginUser (UserRequest) returns (LoginResponse);
+    rpc signupUser (UserRequest) returns (SignupResponse);
+    rpc newGame (NewGameRequest) returns (NewGameResponse);
+    rpc playTurn (TurnRequest) returns (TurnResponse);
+    rpc getHistory (InforRequest) returns (HistoryResponse);
+    rpc getTop100 (InforRequest) returns (Top100Reponse);
+}

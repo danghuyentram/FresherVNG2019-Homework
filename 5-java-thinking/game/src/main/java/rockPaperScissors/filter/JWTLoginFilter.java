@@ -1,5 +1,6 @@
 package rockPaperScissors.filter;
 
+import com.google.gson.Gson;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Collections;
+import java.util.stream.Collectors;
 
 /**
  * Created by nhs3108 on 29/03/2017.
@@ -26,11 +28,43 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
         setAuthenticationManager(authManager);
     }
 
+//    @Override
+//    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
+//        User user = new User();
+//        user.setUserName(request.getParameter("username"));
+//        user.setUserPassword(request.getParameter("password"));
+//
+//        return getAuthenticationManager().authenticate(
+//                new UsernamePasswordAuthenticationToken(
+//                        user.getUserName(),
+//                        user.getUserPassword(),
+//                        Collections.emptyList()
+//                )
+//        );
+//    }
+
+
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException, IOException, ServletException {
+
         User user = new User();
-        user.setUserName(request.getParameter("username"));
-        user.setUserPassword(request.getParameter("password"));
+
+        if(request.getParameter("username")!=null){
+            user.setUserName(request.getParameter("username"));
+            user.setUserPassword(request.getParameter("password"));
+        }
+        else{
+            String test="";
+            if ("POST".equalsIgnoreCase(request.getMethod()))
+            {
+                test  = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
+            }
+            Gson g = new Gson();
+            user = g.fromJson(test, User.class);
+
+        }
+
+
 
         return getAuthenticationManager().authenticate(
                 new UsernamePasswordAuthenticationToken(
@@ -44,5 +78,6 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
     @Override
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
         TokenAuthenticationService.addAuthentication(response, authResult.getName());
+        logger.info("User: "+authResult.getName()+" is login success");
     }
 }

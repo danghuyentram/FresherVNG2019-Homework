@@ -2,36 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76ac0f14-7c5a-4d8b-a440-748fe1336ef2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTAuthenticationFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTLoginFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/History.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Turn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/UserNameAndWinRate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/GameRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/TurnRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/service/TokenAuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../4-database-thinking/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../4-database-thinking/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/gamerps.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/src/main/java/rockPaperScissors/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/src/main/java/rockPaperScissors/controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/src/main/java/rockPaperScissors/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/src/main/java/rockPaperScissors/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/target/classes/META-INF/gamerps.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/target/classes/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/target/classes/hello/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/target/classes/hello/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/target/classes/hello/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../gamerps/target/classes/hello/UserRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-1.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-10.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-2.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-3.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-4.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-5.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-6.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-6.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-7.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-7.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-8.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-8.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-9.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo-2019-08-06-9.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log4j2-demo.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log4j2-demo.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rockPaperScissors/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/HTTPController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/HTTPController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -41,49 +24,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="65" />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/TurnRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/HTTPController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1332">
-              <caret line="74" column="71" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="71" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTLoginFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+            <state relative-caret-position="360">
+              <caret line="77" column="91" selection-start-line="77" selection-start-column="91" selection-end-line="77" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,8 +47,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTAuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
+            <state relative-caret-position="461">
               <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTLoginFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="79" column="85" selection-start-line="79" selection-start-column="85" selection-end-line="79" selection-end-column="85" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4122">
+              <caret line="254" column="58" selection-start-line="254" selection-start-column="21" selection-end-line="254" selection-end-column="58" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/rockPaperScissors/ApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Turn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1080">
+              <caret line="67" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/WebSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="432">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,33 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-              <folding>
-                <element signature="e#243#244#0" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/UserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+            <state relative-caret-position="180">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,10 +126,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/GameRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/service/TokenAuthenticationService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+            <state relative-caret-position="522">
+              <caret line="52" column="46" selection-start-line="48" selection-start-column="6" selection-end-line="52" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,20 +149,24 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>JwtResponse</find>
+      <find>lombok</find>
+      <find>login</find>
+      <find>say</find>
+      <find>signup</find>
+      <find>allResult</find>
+      <find>int</find>
+      <find>newGame</find>
+      <find>int32</find>
+      <find>hey</find>
+      <find>Reponse</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/GameDetailRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/GameDetail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/TurnRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/JWTLoginFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/TokenAuthenticationService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/SpringbootAuthUpdatedApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/SecurityConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/JWTAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/JWTAuthorizationFilter.java" />
@@ -198,21 +178,46 @@
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/DAO/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/UserRepositoryCustom.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/UserRepositoryCustomImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Turn.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/UserDetailOfTop100Users.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/UserNameAndWinRate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/History.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTAuthenticationFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTLoginFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/GameRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/service/TokenAuthenticationService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protobuf/proto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protobuf/proto/proto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protobuf/proto/HelloWorld.java" />
+        <option value="$PROJECT_DIR$/src/main/java/protobuf/proto/HelloWorld.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/protobuf/proto/HelloWorld" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/History.java" />
+        <option value="$PROJECT_DIR$/src/main/java/proto/HelloWorld" />
+        <option value="$PROJECT_DIR$/src/main/java/proto/HelloWorld.proto" />
+        <option value="$PROJECT_DIR$/src/main/proto/Game.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/HelloWorldClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/GameServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/GameRPSClient.java" />
+        <option value="$PROJECT_DIR$/src/main/proto/GameRPC.proto" />
+        <option value="$PROJECT_DIR$/src/main/proto/HelloWorld.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/HelloWorldServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/UserNameAndWinRate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j2.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/rockPaperScissors/TestUser.java" />
+        <option value="$PROJECT_DIR$/src/test/java/rockPaperScissors/SpringGrpcApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/DemoJwtApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/rockPaperScissors/GameRPSApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/User.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/GameRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Turn.java" />
+        <option value="$PROJECT_DIR$/src/test/java/rockPaperScissors/DemoJwtApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/rockPaperScissors/ApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/proto/GameRPS.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/GameRPSServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/config/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTLoginFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/service/TokenAuthenticationService.java" />
         <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/HTTPController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/rockPaperScissors/Application.java" />
       </list>
     </option>
   </component>
@@ -223,14 +228,28 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      </list>
-    </option>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gs-mysql-data" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gs-mysql-data" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gs-mysql-data" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
     <option name="y" value="25" />
     <option name="width" value="960" />
@@ -309,6 +328,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="rockPaperScissors" type="462c0819:PsiDirectoryNode" />
+              <item name="grpc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rockPaperScissors" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -334,24 +362,65 @@
               <item name="game" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="proto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="game" type="b2602c69:ProjectViewProjectNode" />
+              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rockPaperScissors" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Course" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/rockPaperScissors/controller" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="rockPaperScissors" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/rockPaperScissors/controller" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
@@ -368,7 +437,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="rockPaperScissors.Application" />
       <module name="game" />
@@ -382,9 +451,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DemoJwtApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="game" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rockPaperScissors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="rockPaperScissors" />
+      <option name="MAIN_CLASS_NAME" value="rockPaperScissors.DemoJwtApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.DemoJwtApplicationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -401,10 +486,51 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 21h 58m 17s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 01m 28s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 01m 47s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 04m 04s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 04m 21s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 05m 19s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 07m 36s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 10m 47s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 11m 29s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoJwtApplicationTests - 2019.08.05 at 22h 12m 31s.xml">
+      <configuration name="DemoJwtApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="25" width="960" height="1055" extended-state="4" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5525164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18249734" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -413,76 +539,37 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32901832" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41639698" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38865545" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32983193" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32983193" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32901832" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.4261057" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3635383" />
+      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.50325733" side_tool="true" weight="0.18249734" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" sideWeight="0.49837133" weight="0.24919957" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven" order="5" sideWeight="0.49674267" weight="0.18249734" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19088319" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32901832" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33009708" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Educational.CheckDetails" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32901832" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-    </layout-to-restore>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/game$DemoJwtApplicationTests.ic" NAME="DemoJwtApplicationTests Coverage Results" MODIFIED="1565017943296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>rockPaperScissors.*</FILTER>
+    </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/TokenAuthenticationService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/JWTLoginFilter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/service.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/SpringbootAuthUpdatedApplication.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/SecurityConstants.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/JWTAuthorizationFilter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/JWTAuthenticationFilter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/WebSecurity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/filter.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/DataSourceConfig.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/service/UserService.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/serviceimpl/UserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/JpaConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/DAO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/DAO/UserDAO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/UserRepositoryCustom.java" />
@@ -491,56 +578,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/UserDetailOfTop100Users.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/UserNameAndWinRate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-          <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#237#238#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/History.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding>
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#770#771#0" expanded="true" />
-            <element signature="e#803#804#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#963#964#0" expanded="true" />
-            <element signature="e#1008#1009#0" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
-            <element signature="e#1115#1116#0" expanded="true" />
-            <element signature="e#1168#1169#0" expanded="true" />
-            <element signature="e#1212#1213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/authentication/AuthenticationManager.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -569,50 +606,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="28" column="19" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#864#865#0" expanded="true" />
-            <element signature="e#909#910#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Turn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#834#835#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#1284#1285#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.21/tomcat-embed-core-9.0.21.jar!/org/apache/tomcat/util/threads/TaskThread.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/service/TokenAuthenticationService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1907#1908#0" expanded="true" />
-            <element signature="e#1938#1939#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -623,30 +620,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="19" selection-start-line="10" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="61" column="47" selection-start-line="61" selection-start-column="47" selection-end-line="61" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/protobuf/proto/HelloWorld.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/protobuf/proto/HelloWorld.PROTO" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/protobuf/proto/HelloWorld.proto" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/protobuf/proto/HelloWorld" />
     <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/TurnRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="180">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/Table.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.9.RELEASE/spring-data-commons-2.1.9.RELEASE.jar!/org/springframework/data/mapping/PropertyPath.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.9.RELEASE/spring-data-commons-2.1.9.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/proto/HelloWorld.proto" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/History.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" selection-start-line="16" selection-end-line="19" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/rockPaperScissors/grpc/helloworld/GrpcServiceGrpc.java" />
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/rockPaperScissors/grpc/helloworld/GameRPSServiceGrpc.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/HelloWorldClient.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/GameRPSClient.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/GameServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/rockPaperScissors/grpc/helloworld/HelloWorldServiceGrpc.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/proto/GameRPC.proto" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/rockPaperScissors/TestUser.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -655,63 +700,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1332">
-          <caret line="74" column="71" selection-start-line="74" selection-start-column="71" selection-end-line="74" selection-end-column="71" />
+        <state relative-caret-position="254">
+          <caret line="173" selection-start-line="173" selection-end-line="173" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTLoginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTAuthenticationFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="46" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/rockPaperScissors/GameRPSApplicationTests.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="254">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -720,8 +718,136 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/repository/GameRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        <state relative-caret-position="594">
+          <caret line="33" selection-start-line="33" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="50" column="28" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/UserNameAndWinRate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/GameRPS.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/rockPaperScissors/grpc/gamerps/GameRPSGrpc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="574" column="22" selection-start-line="574" selection-start-column="22" selection-end-line="574" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/grpc/GameRPSServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="190" column="20" selection-start-line="190" selection-start-column="15" selection-end-line="190" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4122">
+          <caret line="254" column="58" selection-start-line="254" selection-start-column="21" selection-end-line="254" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/rockPaperScissors/ApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/model/Turn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="67" selection-start-line="67" selection-end-line="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/config/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/service/TokenAuthenticationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="52" column="46" selection-start-line="48" selection-start-column="6" selection-end-line="52" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTAuthenticationFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/filter/JWTLoginFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="79" column="85" selection-start-line="79" selection-start-column="85" selection-end-line="79" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/controller/HTTPController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="77" column="91" selection-start-line="77" selection-start-column="91" selection-end-line="77" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/rockPaperScissors/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -731,9 +857,76 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

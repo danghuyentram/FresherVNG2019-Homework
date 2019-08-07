@@ -3,10 +3,14 @@ package rockPaperScissors.model;
 public class UserNameAndWinRate {
     private String userName;
     private Float winRate;
+    private Integer winGameNumber;
+    private Integer totalGame;
 
-    public UserNameAndWinRate(String userName,Float winRate){
+    public UserNameAndWinRate(String userName,Integer winGameNumber,Integer totalGame){
         this.userName = userName;
-        this.winRate = winRate;
+        this.winGameNumber = winGameNumber;
+        this.totalGame = totalGame;
+        this.winRate = this.winGameNumber/this.totalGame*100.f;
     }
 
 

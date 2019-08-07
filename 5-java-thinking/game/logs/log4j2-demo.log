@@ -1,0 +1,94 @@
+2019-08-07 16:30:43.330  INFO minnie-Aspire-V5-591G --- [           main] r.Application                            : Starting Application on minnie-Aspire-V5-591G with PID 27942 (/home/minnie/Desktop/Github/FresherVNG2019-Homework/5-java-thinking/game/target/classes started by minnie in /home/minnie/Desktop/Github/FresherVNG2019-Homework/5-java-thinking/game)
+2019-08-07 16:30:43.469  INFO minnie-Aspire-V5-591G --- [           main] r.Application                            : No active profile set, falling back to default profiles: default
+2019-08-07 16:30:51.747  INFO minnie-Aspire-V5-591G --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-07 16:30:52.809  INFO minnie-Aspire-V5-591G --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 908ms. Found 3 repository interfaces.
+2019-08-07 16:30:55.602  INFO minnie-Aspire-V5-591G --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b2b93b73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:30:58.311  INFO minnie-Aspire-V5-591G --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-08-07 16:30:58.614  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-07 16:30:58.678  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-08-07 16:30:58.680  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-07 16:31:01.234  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-08-07 16:31:01.234  INFO minnie-Aspire-V5-591G --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 17433 ms
+2019-08-07 16:31:02.206  INFO minnie-Aspire-V5-591G --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-08-07 16:31:02.218  WARN minnie-Aspire-V5-591G --- [           main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-08-07 16:31:06.225  INFO minnie-Aspire-V5-591G --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-08-07 16:31:06.504  INFO minnie-Aspire-V5-591G --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-07 16:31:06.717  INFO minnie-Aspire-V5-591G --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-07 16:31:06.718  INFO minnie-Aspire-V5-591G --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-08-07 16:31:07.405  INFO minnie-Aspire-V5-591G --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-07 16:31:07.830  INFO minnie-Aspire-V5-591G --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-07 16:31:09.925  INFO minnie-Aspire-V5-591G --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-07 16:31:10.681  INFO minnie-Aspire-V5-591G --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-08-07 16:31:11.447  INFO minnie-Aspire-V5-591G --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6277a496, org.springframework.security.web.context.SecurityContextPersistenceFilter@24e79a4d, org.springframework.security.web.header.HeaderWriterFilter@3da55998, org.springframework.security.web.authentication.logout.LogoutFilter@7c3223aa, rockPaperScissors.filter.JWTLoginFilter@6632eb19, rockPaperScissors.filter.JWTAuthenticationFilter@42db3ff, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@705eb026, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7369208e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a95aaae, org.springframework.security.web.session.SessionManagementFilter@5b2fc2c0, org.springframework.security.web.access.ExceptionTranslationFilter@6b468710, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57777c23]
+2019-08-07 16:31:12.227  INFO minnie-Aspire-V5-591G --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-07 16:31:12.286  WARN minnie-Aspire-V5-591G --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-07 16:31:12.986  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-08-07 16:31:13.089  INFO minnie-Aspire-V5-591G --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-07 16:31:13.103  INFO minnie-Aspire-V5-591G --- [           main] r.Application                            : Started Application in 32.645 seconds (JVM running for 40.198)
+2019-08-07 16:31:13.105  INFO minnie-Aspire-V5-591G --- [           main] o.l.s.g.GRpcServerRunner                 : Starting gRPC Server ...
+2019-08-07 16:31:13.236  INFO minnie-Aspire-V5-591G --- [           main] o.l.s.g.GRpcServerRunner                 : 'rockPaperScissors.grpc.GameRPSServiceImpl' service has been registered.
+2019-08-07 16:31:13.728  INFO minnie-Aspire-V5-591G --- [           main] o.l.s.g.GRpcServerRunner                 : gRPC Server started, listening on port 6565.
+2019-08-07 16:31:29.928  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-07 16:31:29.929  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-08-07 16:31:29.944  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 15 ms
+2019-08-07 16:31:31.533  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] r.c.MainController                       : save user=user:xxxxx, data={winGameNumber=0, totalGameNumber=-1}
+2019-08-07 16:31:31.738  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] r.c.MainController                       : New user created: userName: xxxxx
+2019-08-07 16:31:41.312  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-2] r.c.MainController                       : save user=user:danghuyentram, data={winGameNumber=0, totalGameNumber=-1}
+2019-08-07 16:31:41.312  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-2] r.c.MainController                       : New user created: userName: danghuyentram
+2019-08-07 16:31:52.418  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-3] r.f.JWTLoginFilter                       : User: danghuyentram is login success
+2019-08-07 16:32:03.278  WARN minnie-Aspire-V5-591G --- [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-08-07 16:32:10.137  WARN minnie-Aspire-V5-591G --- [nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2019-08-07 16:33:06.053  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-6] r.c.MainController                       : {"NewGameId":"1"}
+2019-08-07 16:33:39.283  WARN minnie-Aspire-V5-591G --- [nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=----WebKitFormBoundaryxgFx1NaCAQM8JTeq;charset=UTF-8' not supported]
+2019-08-07 16:34:06.033  INFO minnie-Aspire-V5-591G --- [       Thread-2] o.l.s.g.GRpcServerRunner                 : Shutting down gRPC server ...
+2019-08-07 16:34:06.079  INFO minnie-Aspire-V5-591G --- [       Thread-2] o.l.s.g.GRpcServerRunner                 : gRPC server stopped.
+2019-08-07 16:34:06.080  INFO minnie-Aspire-V5-591G --- [       Thread-2] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-07 16:34:06.148  INFO minnie-Aspire-V5-591G --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-07 16:34:06.173  INFO minnie-Aspire-V5-591G --- [       Thread-2] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-08-07 16:34:06.364  INFO minnie-Aspire-V5-591G --- [       Thread-2] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2019-08-07 16:34:23.047  INFO minnie-Aspire-V5-591G --- [           main] r.Application                            : Starting Application on minnie-Aspire-V5-591G with PID 28245 (/home/minnie/Desktop/Github/FresherVNG2019-Homework/5-java-thinking/game/target/classes started by minnie in /home/minnie/Desktop/Github/FresherVNG2019-Homework/5-java-thinking/game)
+2019-08-07 16:34:23.052  INFO minnie-Aspire-V5-591G --- [           main] r.Application                            : No active profile set, falling back to default profiles: default
+2019-08-07 16:34:25.575  INFO minnie-Aspire-V5-591G --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-08-07 16:34:25.694  INFO minnie-Aspire-V5-591G --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93ms. Found 3 repository interfaces.
+2019-08-07 16:34:26.280  INFO minnie-Aspire-V5-591G --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9edc1122] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-08-07 16:34:26.705  INFO minnie-Aspire-V5-591G --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 8080 (http)
+2019-08-07 16:34:26.722  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.h.Http11NioProtocol                : Initializing ProtocolHandler ["http-nio-8080"]
+2019-08-07 16:34:26.751  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2019-08-07 16:34:26.751  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-07 16:34:27.048  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2019-08-07 16:34:27.048  INFO minnie-Aspire-V5-591G --- [           main] o.s.w.c.ContextLoader                    : Root WebApplicationContext: initialization completed in 3823 ms
+2019-08-07 16:34:27.337  INFO minnie-Aspire-V5-591G --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2019-08-07 16:34:27.341  WARN minnie-Aspire-V5-591G --- [           main] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2019-08-07 16:34:27.702  INFO minnie-Aspire-V5-591G --- [           main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2019-08-07 16:34:27.866  INFO minnie-Aspire-V5-591G --- [           main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-08-07 16:34:28.110  INFO minnie-Aspire-V5-591G --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.10.Final}
+2019-08-07 16:34:28.111  INFO minnie-Aspire-V5-591G --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2019-08-07 16:34:28.743  INFO minnie-Aspire-V5-591G --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-08-07 16:34:29.162  INFO minnie-Aspire-V5-591G --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-08-07 16:34:30.396  INFO minnie-Aspire-V5-591G --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-08-07 16:34:30.904  INFO minnie-Aspire-V5-591G --- [           main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-08-07 16:34:31.542  INFO minnie-Aspire-V5-591G --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ba623d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@4281a26f, org.springframework.security.web.header.HeaderWriterFilter@7a7bd9a8, org.springframework.security.web.authentication.logout.LogoutFilter@34588991, rockPaperScissors.filter.JWTLoginFilter@2d5435d4, rockPaperScissors.filter.JWTAuthenticationFilter@6dbdbb69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a1e578f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e27b77a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@576a8b00, org.springframework.security.web.session.SessionManagementFilter@1832b0f6, org.springframework.security.web.access.ExceptionTranslationFilter@3b3a3a92, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24e79a4d]
+2019-08-07 16:34:31.701  INFO minnie-Aspire-V5-591G --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2019-08-07 16:34:31.768  WARN minnie-Aspire-V5-591G --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-08-07 16:34:32.846  INFO minnie-Aspire-V5-591G --- [           main] o.a.c.h.Http11NioProtocol                : Starting ProtocolHandler ["http-nio-8080"]
+2019-08-07 16:34:32.867  INFO minnie-Aspire-V5-591G --- [           main] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 8080 (http) with context path ''
+2019-08-07 16:34:32.869  INFO minnie-Aspire-V5-591G --- [           main] r.Application                            : Started Application in 11.56 seconds (JVM running for 14.939)
+2019-08-07 16:34:32.870  INFO minnie-Aspire-V5-591G --- [           main] o.l.s.g.GRpcServerRunner                 : Starting gRPC Server ...
+2019-08-07 16:34:32.949  INFO minnie-Aspire-V5-591G --- [           main] o.l.s.g.GRpcServerRunner                 : 'rockPaperScissors.grpc.GameRPSServiceImpl' service has been registered.
+2019-08-07 16:34:33.367  INFO minnie-Aspire-V5-591G --- [           main] o.l.s.g.GRpcServerRunner                 : gRPC Server started, listening on port 6565.
+2019-08-07 16:34:37.189  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-08-07 16:34:37.189  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2019-08-07 16:34:37.205  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 15 ms
+2019-08-07 16:34:38.260  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-1] r.c.MainController                       : Not exists game of user: danghuyentram
+2019-08-07 16:34:50.424  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-2] r.f.JWTLoginFilter                       : User: danghuyentram is login success
+2019-08-07 16:35:10.706  INFO minnie-Aspire-V5-591G --- [nio-8080-exec-3] r.c.MainController                       : {"NewGameId":"2"}
+2019-08-07 16:35:40.953  INFO minnie-Aspire-V5-591G --- [       Thread-2] o.l.s.g.GRpcServerRunner                 : Shutting down gRPC server ...
+2019-08-07 16:35:40.955  INFO minnie-Aspire-V5-591G --- [       Thread-2] o.l.s.g.GRpcServerRunner                 : gRPC server stopped.
+2019-08-07 16:35:40.955  INFO minnie-Aspire-V5-591G --- [       Thread-2] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-08-07 16:35:40.957  INFO minnie-Aspire-V5-591G --- [       Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-08-07 16:35:40.968  INFO minnie-Aspire-V5-591G --- [       Thread-2] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2019-08-07 16:35:40.996  INFO minnie-Aspire-V5-591G --- [       Thread-2] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
