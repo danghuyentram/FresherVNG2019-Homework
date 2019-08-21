@@ -1,7 +1,12 @@
+body{
+  background-image: url("../media/background.jpg")
+}
+
 #photos {
     /* Prevent vertical gaps */
-    line-height: 0;
-     
+    line-height: 0px;
+    float: right;
+         
     -webkit-column-count: 5;
     -webkit-column-gap:   10px;
     -moz-column-count:    5;
@@ -30,18 +35,34 @@
 
   }
 
-  h1{
-    color: #ff6a00;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
 
-  }
-  
-  .icon{
-    width: 40px;
-    height: 40px;
-    margin: 10px;
-  }
+h1{
+    margin: 20px;
+    color: 	#df9b9a;
+    font-family:  Tahoma;
+    font-size: 50px;
 
+
+}
+
+
+
+button,label{
+  max-width: 400px;
+  background: #92a8d1;
+  border: 1px solid;
+  float: left;
+  height:  50px;
+  text-align: center;
+  width:  100px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 900;
+  font-size: 20px; 
+  line-height: 50px;
+  font-family: Tahoma-, sans-serif;
+  margin: 20px;
+}
   
 
 

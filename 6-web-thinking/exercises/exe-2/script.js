@@ -12,6 +12,9 @@ blueNumVal = document.querySelector('#blueNum');
 // select Color Display
 colorDisplay = document.querySelector('#color-display');
 
+// select Color hex code
+colorHexCode = document.querySelector('#color-hexcode');
+
 // select labels
 redLbl = document.querySelector('label[for=red]'), 
 greenLbl = document.querySelector('label[for=green]'), 
@@ -28,9 +31,19 @@ changeRangeNumVal();
 // init Colors controls
 colorSliders();
 
+function componentToHex(x) {
+    x = parseInt(x).toString(16);      //Convert to a base16 string
+    return (x.length==1) ? "0"+x : x; 
+}
+
+function rgbToHex(r, g, b) {
+    return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
 // display colors
 function displayColors(){
     colorDisplay.style.backgroundColor = `rgb(${red.value}, ${green.value}, ${blue.value})`;    
+    colorHexCode.innerHTML = rgbToHex(red.value,green.value,blue.value);
 }
 
 // initial color val when DOM is loaded 

@@ -4,6 +4,7 @@ function getRandomSize(min, max) {
   
 
 function previewFiles() {
+  console.log("abx");
     var preview = document.querySelector('#photos');
     var files   = document.querySelector('input[type=file]').files;
   

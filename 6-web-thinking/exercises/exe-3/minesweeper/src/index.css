@@ -1,0 +1,106 @@
+body {
+  margin: 20px;
+  padding: 0;
+  font-family: sans-serif;
+  background: #92a8d1;
+  background-image: url("./media/background.jpg")
+}
+
+
+
+.board {
+    max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+table{
+  margin-top: 30px; 
+  border: #d0e1ff;
+  background-color: white;
+}
+
+.cell {
+    max-width: 400px;
+    background: #92a8d1;
+    border: 1px solid #fff;
+    float: left;
+    line-height: 34px;
+    height:  34px;
+    text-align: center;
+    width:  34px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-weight: 900;
+
+}
+
+
+.cell-is-mine{
+  max-width: 400px;
+  background: 	#ffecec;
+  border: 1px solid #fff;
+  float: left;
+  line-height: 34px;
+  height:  34px;
+  text-align: center;
+  width:  34px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  font-weight: 900;
+
+
+}
+
+
+form input{
+  margin: 20px;
+  width: 50px;
+  border: 	#d0e1ff;
+  text-align: center;
+}
+
+form button{
+  margin: 10px 20px;
+  text-align: center;
+  background-color: 	#92a8d1 !important;
+  border: none !important;
+  font-weight: 900 !important;
+
+}
+
+form label{
+  color: 	white;
+  font-weight: 1000;
+  border: white;
+
+}
+
+.header{
+  background-color: #f7cac9e5;
+  border-radius: 5px;  
+}
+
+.header h1:before,.header h1:after{
+  background-image: url('media/sakura.png');
+  background-size: 40px 40px;
+  display: inline-block;
+  width: 40px; 
+  height: 40px;
+  margin: 10px 10px 0px 10px;
+  content:"";
+}
+
+
+
+.header h1{
+  margin: 10px;
+  color:	white;
+  font-weight: 900;
+
+}
+
+
