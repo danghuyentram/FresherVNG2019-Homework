@@ -73,6 +73,7 @@ function sliderFill(clr){
 
     // clr input
     if(clr === red){
+        
         clr.style.background = `linear-gradient(to right, rgb(${clr.value},0,0) ${percent}%, #cccccc 0%)`;    
     } else if (clr === green) {
         clr.style.background = `linear-gradient(to right, rgb(0,${clr.value},0) ${percent}%, #cccccc 0%)`;    

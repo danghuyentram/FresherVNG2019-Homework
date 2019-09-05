@@ -4,7 +4,6 @@ body{
 
 #photos {
     /* Prevent vertical gaps */
-    line-height: 0px;
     float: right;
          
     -webkit-column-count: 5;
@@ -15,9 +14,9 @@ body{
     column-gap:           10px;  
   }
   
-  #photos img {
+#photos img {
     /* Just in case there are inline attributes */
-    width: 100% !important;
+    width: 100% !important; 
     height: auto !important;
     margin-top: 7px;
     margin-bottom: 7px; 
@@ -60,7 +59,7 @@ button,label{
   font-weight: 900;
   font-size: 20px; 
   line-height: 50px;
-  font-family: Tahoma-, sans-serif;
+  font-family: Tahoma, sans-serif;
   margin: 20px;
 }
   

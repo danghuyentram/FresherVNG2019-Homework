@@ -1,7 +1,4 @@
-function getRandomSize(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
-  }
-  
+
 
 function previewFiles() {
   console.log("abx");
@@ -16,8 +13,6 @@ function previewFiles() {
   
         reader.addEventListener("load", function () {
           var image = new Image();
-          image.height = getRandomSize(200,400);
-          image.width = getRandomSize(200,400);
           image.title = file.name;
           image.src = this.result;
           preview.appendChild( image );

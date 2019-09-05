@@ -30,10 +30,17 @@ class FormHeader extends Component{
 
 
     onClick = ()=>{
-        if(this.state.height*this.state.width>=this.state.mines)
+        if(this.state.height <1 || this.state.width<1 || this.state.mines<1)
+            alert("Input number must >0");
+        else if(this.state.height >40 || this.state.width>40 )
+            alert("Input number must <40");
+        else if(this.state.height*this.state.width>=this.state.mines)
             this.props.onClick();
         else
             alert("Mines is over than number of cells");
+            
+
+
 
     }
 
@@ -45,17 +52,17 @@ class FormHeader extends Component{
                             <label htmlFor="height" >
                                 Height:
                             </label>
-                            <input id="height" type="number" value={this.state.height} onChange={this.updateState} />
+                            <input id="height" type="number" value={this.state.height} onChange={this.updateState} min="1" max="40"/>
 
                             <label htmlFor="width" >
                                 Width:
                             </label>
-                            <input id="width" type="number" value={this.state.width} onChange={this.updateState} />
+                            <input id="width" type="number" value={this.state.width} onChange={this.updateState} min="1" max="40"/>
 
                             <label htmlFor="mines" >
                                 Mines:
                             </label>
-                            <input id="mines" type="number" value={this.state.mines} onChange={this.updateState} />
+                            <input id="mines" type="number" value={this.state.mines} onChange={this.updateState} min="1" max="40"/>
 
                             <button type="button" className="btn btn-primary mb-2" 
                             onClick={this.onClick}>
